@@ -1,6 +1,5 @@
-export default function Header() {
+export default function Navigation() {
     return (
-        <header id="masthead" className="site-header">
         <nav id="primary-navigation" className="site-navigation">
             <div className="container">
 
@@ -34,6 +33,5 @@ export default function Header() {
 
             </div>
         </nav>
-    </header>
     )
 }
