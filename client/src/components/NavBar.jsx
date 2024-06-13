@@ -13,6 +13,9 @@ export default function NavBar(){
                 <a href="about.html" className="nav-item nav-link">About</a>
                 <a href="service.html" className="nav-item nav-link">Service</a>
                 <a href="product.html" className="nav-item nav-link">Product</a>
+                <a href="index.html" className="nav-item nav-link">Login</a>
+                <a href="index.html" className="nav-item nav-link">Register</a>
+                <a href="index.html" className="nav-item nav-link">Logout</a>
                 <div className="nav-item dropdown">
                     <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div className="dropdown-menu m-0">
