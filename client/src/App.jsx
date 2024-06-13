@@ -25,39 +25,20 @@ function App() {
     <div id="box">
       <TopBar />
       <NavBar />
-      <Home/> 
-      <Footer />
-      {/* <Routes>
-        <Route path={Path.Banner} element={<Banner />} />
+      <Routes>
+        <Route path={Path.Home} element={<Home />} />
+        <Route path={Path.About} element={<About />} />
+        <Route path={Path.Services} element={<Services />} />
         <Route path={Path.Products} element={<Products />} />
         <Route path={Path.Login} element={<Login />} />
         <Route path={Path.Register} element={<Register />} />
-        </Routes> */}
+        <Route path={Path.Logout} element={<Home />} />
+      </Routes>
+      <Footer />
 
-        {/* <Route element={<AuthGuard />}>
-        <Route path={Path.Create} element={<Create />} />
-        <Route path={Path.Details} element={<Details />} />
-        <Route path={Path.Edit} element={<Edit />} />
-        <Route path={Path.Logout} element={<Logout />} />
-      </Route> */}
-     
+      <a href="#" className="btn btn-secondary py-3 fs-4 back-to-top"><i className="bi bi-arrow-up"></i></a>
     </div >
 
-
-    // <>
-
-   
-    //   <Banner/>
-    //   <About/>
-    //   <Facts/>
-    //   <Services/>
-    //   <Features/>
-    //   <Products/>
-    //   <Testimonial/>
-    //   <Team/>
-    //   <Blog/>
-    //   {/* <a href="#" className="btn btn-secondary py-3 fs-4 back-to-top"><i className="bi bi-arrow-up"></i></a> */}
-    // </>
   )
 }
 
