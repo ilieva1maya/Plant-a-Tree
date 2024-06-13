@@ -16,6 +16,7 @@ import Footer from "./components/Footer"
 import Path from "./paths"
 import Login from "./components/Login"
 import Register from "./components/Register"
+import Home from "./components/home/Home"
 
 function App() {
 
@@ -24,7 +25,7 @@ function App() {
     <div id="box">
       <TopBar />
       <NavBar />
-      <Carousel/>
+      <Home/> 
       <Footer />
       {/* <Routes>
         <Route path={Path.Banner} element={<Banner />} />

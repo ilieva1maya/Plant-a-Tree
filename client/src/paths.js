@@ -1,6 +1,6 @@
 const Path = {
 
-    Banner: '/',
+    Home: '/',
     Login: '/login',
     Register: '/register',
     Logout: '/logout',

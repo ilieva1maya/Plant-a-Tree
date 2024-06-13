@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom"
+import Path from "../paths"
+
 export default function NavBar(){
     return(
         <nav className="navbar navbar-expand-lg bg-primary navbar-dark shadow-sm py-3 py-lg-0 px-3 px-lg-5">
@@ -9,13 +12,14 @@ export default function NavBar(){
         </button>
         <div className="collapse navbar-collapse" id="navbarCollapse">
             <div className="navbar-nav mx-auto py-0">
-                <a href="index.html" className="nav-item nav-link active">Home</a>
-                <a href="about.html" className="nav-item nav-link">About</a>
-                <a href="service.html" className="nav-item nav-link">Service</a>
-                <a href="product.html" className="nav-item nav-link">Product</a>
-                <a href="index.html" className="nav-item nav-link">Login</a>
-                <a href="index.html" className="nav-item nav-link">Register</a>
-                <a href="index.html" className="nav-item nav-link">Logout</a>
+                <Link to={Path.Home} className="nav-item nav-link active">Home</Link>
+                <Link to={Path.About} className="nav-item nav-link">About</Link>
+                <Link to={Path.Services} className="nav-item nav-link">Services</Link>
+                <Link to={Path.Products} className="nav-item nav-link">Products</Link>
+                <Link to={Path.Login} className="nav-item nav-link">Login</Link>
+                <Link to={Path.Register} className="nav-item nav-link">Register</Link>
+                <Link to={Path.Logout} className="nav-item nav-link">Logout</Link>
+
                 <div className="nav-item dropdown">
                     <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div className="dropdown-menu m-0">
