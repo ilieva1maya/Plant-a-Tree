@@ -14,8 +14,7 @@ function App() {
     return (
         <>
             <Navigation />
-            <HeroSection />
-            <Footer />
+            <HeroSection />           
             <main id="main" className="site-main">
                 <Features/>
                 <Services/>
@@ -23,6 +22,7 @@ function App() {
                 <Portflio/>
                 <Newsletter/>
             </main>
+            <Footer />
         </>
     )
 }
