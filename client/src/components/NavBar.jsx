@@ -20,6 +20,8 @@ export default function NavBar(){
                 <Link to={Path.Register} className="nav-item nav-link">Register</Link>
                 <Link to={Path.Logout} className="nav-item nav-link">Logout</Link>
 
+                {/* Comment:
+                To decide to include it or not */}
                 <div className="nav-item dropdown">
                     <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div className="dropdown-menu m-0">
