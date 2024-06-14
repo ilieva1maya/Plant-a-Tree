@@ -15,8 +15,8 @@ import Products from "./components/Products"
 import Footer from "./components/Footer"
 import Path from "./paths"
 import Login from "./components/login/Login"
-import Register from "./components/Register"
 import Home from "./components/home/Home"
+import Register from "./components/register/Register"
 
 function App() {
 
