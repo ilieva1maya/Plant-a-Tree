@@ -1,10 +1,10 @@
-export default function LoginExp() {
+export default function Login(){
     return(
-        <div className="limiter">
-		<div className="container-login100">
+
+		<div className="container">
 			<div className="wrap-login100">
-				<form className="login100-form validate-form p-l-55 p-r-55 p-t-150">
-					<span className="login100-form-title">
+				<form className="mx-auto text-center mb-5" style={{ maxWidth: 500 }}>
+					<span className="text-primary text-uppercase display-6">
 						Sign In
 					</span>
 
@@ -19,12 +19,12 @@ export default function LoginExp() {
 					</div>
 
 					<div className="text-right p-t-13 p-b-23">
-						{/* <span className="txt1">
+						<span className="txt1">
 							Forgot
-						</span> */}
+						</span>
 
 						<a href="#" className="txt2">
-						Forgot Username / Password?
+							Username / Password?
 						</a>
 					</div>
 
@@ -34,7 +34,7 @@ export default function LoginExp() {
 						</button>
 					</div>
 
-					<div className="flex-col-c p-t-50 p-b-40">
+					<div className="flex-col-c p-t-170 p-b-40">
 						<span className="txt1 p-b-9">
 							Don’t have an account?
 						</span>
@@ -46,6 +46,6 @@ export default function LoginExp() {
 				</form>
 			</div>
 		</div>
-	</div>
+	
     )
 }
