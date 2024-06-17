@@ -18,6 +18,7 @@ import Login from "./components/login/Login"
 import Home from "./components/home/Home"
 import Register from "./components/register/Register"
 
+
 function App() {
 
   return (
@@ -31,7 +32,7 @@ function App() {
         <Route path={Path.Services} element={<Services />} />
         <Route path={Path.Products} element={<Products />} />
         <Route path={Path.Login} element={<Login />} />
-        <Route path={Path.Register} element={<Register />} />
+        <Route path={Path.Register} element={<Register/>} />
         <Route path={Path.Logout} element={<Home />} />
       </Routes>
       <Footer />

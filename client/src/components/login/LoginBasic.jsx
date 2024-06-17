@@ -1,4 +1,4 @@
-export default function Login(){
+export default function LoginBasic(){
     return(
 
 		<div className="container">
