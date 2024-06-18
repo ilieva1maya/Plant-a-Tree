@@ -13,16 +13,18 @@ export default function NavBar(){
         <div className="collapse navbar-collapse" id="navbarCollapse">
             <div className="navbar-nav mx-auto py-0">
                 <Link to={Path.Home} className="nav-item nav-link active">Home</Link>
-                <Link to={Path.About} className="nav-item nav-link">About</Link>
-                <Link to={Path.Services} className="nav-item nav-link">Services</Link>
-                <Link to={Path.Products} className="nav-item nav-link">Products</Link>
+                <Link to={Path.Catalog} className="nav-item nav-link">Catalog</Link>
+                <Link to={Path.MyForest} className="nav-item nav-link">My Forest</Link>
+                <Link to={Path.About} className="nav-item nav-link">About us</Link>
+                <Link to={Path.Contributors} className="nav-item nav-link">Our Contributors</Link>
+                <Link to={Path.Services} className="nav-item nav-link">Services</Link>               
                 <Link to={Path.Login} className="nav-item nav-link">Login</Link>
                 <Link to={Path.Register} className="nav-item nav-link">Register</Link>
                 <Link to={Path.Logout} className="nav-item nav-link">Logout</Link>
 
                 {/* Comment:
                 To decide to include it or not */}
-                <div className="nav-item dropdown">
+                {/* <div className="nav-item dropdown">
                     <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div className="dropdown-menu m-0">
                         <a href="blog.html" className="dropdown-item">Blog Grid</a>
@@ -31,7 +33,7 @@ export default function NavBar(){
                         <a href="team.html" className="dropdown-item">The Team</a>
                         <a href="testimonial.html" className="dropdown-item">Testimonial</a>
                     </div>
-                </div>
+                </div> */}
                 <a href="contact.html" className="nav-item nav-link">Contact</a>
             </div>
         </div>

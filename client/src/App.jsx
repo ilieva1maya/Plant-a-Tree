@@ -8,7 +8,7 @@ import About from "./components/About"
 // import Facts from "./components/Facts"
 import Services from "./components/Services"
 // import Features from "./components/Features"
-import Products from "./components/Products"
+import Catalog from "./components/Catalog"
 // import Testimonial from "./components/Testimonial"
 // import Team from "./components/Team"
 // import Blog from "./components/Blog"
@@ -17,6 +17,8 @@ import Path from "./paths"
 import Login from "./components/login/Login"
 import Home from "./components/home/Home"
 import Register from "./components/register/Register"
+import MyForest from "./components/MyForest"
+import Contributors from "./components/Contributors"
 
 
 function App() {
@@ -28,9 +30,11 @@ function App() {
       <NavBar />
       <Routes>
         <Route path={Path.Home} element={<Home />} />
+        <Route path={Path.Catalog} element={<Catalog />} />
+        <Route path={Path.MyForest} element={<MyForest />} />
         <Route path={Path.About} element={<About />} />
-        <Route path={Path.Services} element={<Services />} />
-        <Route path={Path.Products} element={<Products />} />
+        <Route path={Path.Contributors} element={<Contributors />} />
+        <Route path={Path.Services} element={<Services />} />        
         <Route path={Path.Login} element={<Login />} />
         <Route path={Path.Register} element={<Register/>} />
         <Route path={Path.Logout} element={<Home />} />

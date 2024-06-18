@@ -283,8 +283,8 @@
 }
 
 .bg-footer {
-    background: linear-gradient(rgba(52, 173, 84, .7), rgba(52, 173, 84, .7)), url(../img/footer.png) center bottom no-repeat;
-    background-size: contain;
+    background: linear-gradient(rgba(52, 173, 84, .7), rgba(52, 173, 84, .7)), url(../img/forest.png) center bottom no-repeat;
+    background-size: cover;
 }
 
 @media (min-width: 991.98px) {

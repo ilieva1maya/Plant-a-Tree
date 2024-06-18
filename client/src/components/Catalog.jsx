@@ -1,4 +1,4 @@
-export default function Products() {
+export default function Catalog() {
     return (
         <div className="container-fluid py-5">
         <div className="container">

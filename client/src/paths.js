@@ -1,13 +1,15 @@
 const Path = {
 
     Home: '/',
+    Catalog: '/catalog',
+    MyForest: '/myforest',
+    Contributors: '/ourcontributors',
     Login: '/login',
     Register: '/register',
-    Logout: '/',
-    Products: '/products',
+    Logout: '/',    
     About: '/about',
     Services: '/services',
-    Team: '/ream',
+    Team: '/team',
 
 
 
