@@ -4,7 +4,7 @@ export default function Carousel() {
             <div id="header-carousel" className="carousel slide carousel-fade" data-bs-ride="carousel">
                 <div className="carousel-inner">
                     <div className="carousel-item active">
-                        <img className="w-100" src="img/carousel-1.jpg" alt="Image" />
+                        <img className="w-100" src="img/forest1.png" alt="Forest" />
                         <div className="carousel-caption top-0 bottom-0 start-0 end-0 d-flex flex-column align-items-center justify-content-center">
                             <div className="text-start p-5" style={{ maxWidth: 900 }}>
                                 <h3 className="text-white">Organic Vegetables</h3>

@@ -11,7 +11,7 @@ export default function TopBar() {
                 <div className="col-lg-6">
                     <div className="d-flex align-items-center justify-content-center">
                         <a href="index.html" className="navbar-brand ms-lg-5">
-                            <h1 className="m-0 display-4 text-primary"><span className="text-secondary">Farm</span>Fresh</h1>
+                            <h1 className="m-0 display-4 text-primary"><span className="text-secondary">Plant</span>Tree</h1>
                         </a>
                     </div>
                 </div>
