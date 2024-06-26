@@ -1,13 +1,13 @@
-import Banner from "../Banner";
+// import Banner from "../Banner";
 import Carousel from "../Carousel";
-import Facts from "../Facts";
+// import Facts from "../Facts";
 
 export default function Home() {
     return (
         <>            
             <Carousel />
-            <Banner />
-            <Facts />
+            {/* <Banner /> */}
+            {/* <Facts /> */}
         </>
     )
 }

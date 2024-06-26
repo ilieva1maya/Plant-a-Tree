@@ -1,6 +1,6 @@
 export default function Login() {
     return(
-        <div className="limiter">
+        
 		<div className="container-login100">
 			<div className="wrap-login100">
 				<form className="login100-form validate-form p-l-55 p-r-55 p-t-150">
@@ -9,7 +9,7 @@ export default function Login() {
 					</span>
 
 					<div className="wrap-input100 validate-input m-b-16" data-validate="Please enter username">
-						<input className="input100" type="text" name="username" placeholder="Username"/>
+						<input className="input100" type="text" name="username" placeholder="E-mail"/>
 						<span className="focus-input100"></span>
 					</div>
 
@@ -19,10 +19,6 @@ export default function Login() {
 					</div>
 
 					<div className="text-right p-t-13 p-b-23">
-						{/* <span className="txt1">
-							Forgot
-						</span> */}
-
 						<a href="#" className="txt2">
 						Forgot Username / Password?
 						</a>
@@ -46,6 +42,6 @@ export default function Login() {
 				</form>
 			</div>
 		</div>
-	</div>
+	
     )
 }

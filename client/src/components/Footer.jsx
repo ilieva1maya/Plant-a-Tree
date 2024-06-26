@@ -1,7 +1,7 @@
 export default function Footer() {
     return (
         <>
-            <div className="container-fluid bg-footer bg-primary text-white mt-5">
+            {/* <div className="container-fluid bg-footer bg-primary text-white mt-5">
                 <div className="container">
                     <div className="row gx-5">
                         <div className="col-lg-8 col-md-6">
@@ -66,7 +66,7 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
             <div className="container-fluid bg-dark text-white py-4">
                 <div className="container text-center">
                     <p className="mb-0">&copy; <a className="text-secondary fw-bold" href="#">Plant a Tree</a>. All Rights Reserved. Designed by <a className="text-secondary fw-bold" href="https://htmlcodex.com">HTML Codex</a></p>

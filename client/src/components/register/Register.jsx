@@ -1,6 +1,6 @@
 export default function Register() {
     return(
-        <div className="limiter">
+        
 		<div className="container-login100">
 			<div className="wrap-login100">
 				<form className="login100-form validate-form p-l-55 p-r-55 p-t-150">
@@ -9,7 +9,7 @@ export default function Register() {
 					</span>
 
 					<div className="wrap-input100 validate-input m-b-16" data-validate="Please enter username">
-						<input className="input100" type="text" name="username" placeholder="Username"/>
+						<input className="input100" type="text" name="username" placeholder="E-mail"/>
 						<span className="focus-input100"></span>
 					</div>
 
@@ -43,6 +43,6 @@ export default function Register() {
 				</form>
 			</div>
 		</div>
-	</div>
+	
     )
 }
