@@ -14,6 +14,7 @@ export default function NavBar(){
             <div className="navbar-nav mx-auto py-0">
                 <Link to={Path.Home} className="nav-item nav-link active">Home</Link>
                 <Link to={Path.Catalog} className="nav-item nav-link">Catalog</Link>
+                <Link to={Path.AddSpecies} className="nav-item nav-link">Add Species</Link>
                 <Link to={Path.MyForest} className="nav-item nav-link">My Forest</Link>
                 <Link to={Path.About} className="nav-item nav-link">About us</Link>
                 <Link to={Path.Contributors} className="nav-item nav-link">Our Contributors</Link>
