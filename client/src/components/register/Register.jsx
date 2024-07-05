@@ -37,7 +37,7 @@ export default function Register() {
 						</span>
 
 						<a href="#" className="txt3">
-							Sign in
+							Sign in here
 						</a>
 					</div>
 				</form>
