@@ -1,9 +1,9 @@
 import { request } from "../lib/request";
 
-const baseUrl = 'http://localhost:3030/data/species'
+const baseUrl = 'http://localhost:3030/jsonstore/catalog'
 
-export const getAll = async () => {   
-    const result = await request('GET', baseUrl);   
+export const getAll = async () => {
+    const result = await request('GET', baseUrl);
     return result;
 }
 
@@ -27,8 +27,9 @@ export const getOne = async (id) => {
     return result;
 }
 
-export const create = async (gameData) => {
-    const result = await request('POST', baseUrl, gameData);
+export const create = async (speciesData) => {
+
+    const result = await request('POST', baseUrl, speciesData);
 
     return result
 }

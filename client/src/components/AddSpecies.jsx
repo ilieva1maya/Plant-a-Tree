@@ -1,17 +1,20 @@
+import {create} from "../services/speciesService"
+
 export default function AddSpecies() {
 
-    const createGameSubmitHandler = async (e) => {
+    const addSpeciesSubmitHandler = async (e) => {
         e.preventDefault();
 
         const speciesData = Object.fromEntries(new FormData(e.currentTarget));
 
-        console.log(speciesData)
+        const result = await create(speciesData);
+        console.log(result);
     }
 
     return (
 
         <div id="create-page" className="auth">
-            <form onSubmit={createGameSubmitHandler}>
+            <form onSubmit={addSpeciesSubmitHandler}>
                 <div className="container-add">
 
                     <h3>In botany, a tree is a perennial plant with an elongated stem, or trunk. Usually supporting branches and leaves. </h3>
