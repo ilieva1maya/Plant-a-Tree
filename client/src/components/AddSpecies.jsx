@@ -1,15 +1,25 @@
-import {create} from "../services/speciesService"
+import * as speciesService from "../services/speciesService";
+import { useNavigate } from "react-router-dom";
 
 export default function AddSpecies() {
-
+    const navigate = useNavigate();
     const addSpeciesSubmitHandler = async (e) => {
         e.preventDefault();
 
         const speciesData = Object.fromEntries(new FormData(e.currentTarget));
 
-        const result = await create(speciesData);
-        console.log(result);
+        try {
+            // понеже никъде не използваме result
+            // const result = await speciesService.create(speciesData);
+            // можем да го направим така
+            await speciesService.create(speciesData);
+            navigate('/catalog');
+        } catch (error) {
+            // в последствие някаква логика, нотификация за грешки
+            console.log(`Error from create.jsx: ${error}`);
+        }
     }
+
 
     return (
 
@@ -36,6 +46,9 @@ export default function AddSpecies() {
 
                     <label htmlFor="foliage" className="txt4">Foliage:</label>
                     <input className="input100" type="text" name="foliage" placeholder="Foliage" />
+
+                    <label htmlFor="image" className="txt4">Image:</label>
+                    <input className="input100" type="text" name="image" placeholder="Image" />
 
                     <label htmlFor="more" className="txt4">More:</label>
                     <input className="input100" type="text" name="more" placeholder="Tell us something interesting..." />

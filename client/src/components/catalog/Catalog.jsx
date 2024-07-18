@@ -1,4 +1,17 @@
+import { useEffect, useState } from "react";
+import * as speciesService from "../../services/speciesService"
+
 export default function Catalog() {
+
+    const [species, setSpecies] = useState([]);
+
+    useEffect(() => {
+        speciesService.getAll()
+            .then(result => setSpecies(result));
+    }, []);
+
+    console.log(species);
+
     return (
         <div className="container-fluid py-5">
             <div className="container">

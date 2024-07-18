@@ -1339,6 +1339,20 @@
     	}
     };
     var seedData = {
+        catalog: {
+            "0132a278-5a93-42ef-99e2-3dd81503a6bc":
+            {
+                name: "Oak",
+                family: "Fagaceae",
+                height: "15-35 meters",
+                exposure: "full sun",
+                soil: "not too chalky",
+                foliage: "deciduous",
+                image: "img/oak.png",
+                more: "Often grown in parks or woods, it is only grown in our gardens if sufficient space is available",
+                _id: "0132a278-5a93-42ef-99e2-3dd81503a6bc"
+            }
+        },
         games: {
             "1b82a613-c45f-43aa-81c8-ad956588e1cd": {
                 title: "Future before the past",
@@ -1561,44 +1575,44 @@
     			_id: "b8608c22-dd57-4b24-948e-b358f536b958"
     		}
     	},
-    	catalog: {
-    		"53d4dbf5-7f41-47ba-b485-43eccb91cb95": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			make: "Table",
-    			model: "Swedish",
-    			year: 2015,
-    			description: "Medium table",
-    			price: 235,
-    			img: "./images/table.png",
-    			material: "Hardwood",
-    			_createdOn: 1615545143015,
-    			_id: "53d4dbf5-7f41-47ba-b485-43eccb91cb95"
-    		},
-    		"f5929b5c-bca4-4026-8e6e-c09e73908f77": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			make: "Sofa",
-    			model: "ES-549-M",
-    			year: 2018,
-    			description: "Three-person sofa, blue",
-    			price: 1200,
-    			img: "./images/sofa.jpg",
-    			material: "Frame - steel, plastic; Upholstery - fabric",
-    			_createdOn: 1615545572296,
-    			_id: "f5929b5c-bca4-4026-8e6e-c09e73908f77"
-    		},
-    		"c7f51805-242b-45ed-ae3e-80b68605141b": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			make: "Chair",
-    			model: "Bright Dining Collection",
-    			year: 2017,
-    			description: "Dining chair",
-    			price: 180,
-    			img: "./images/chair.jpg",
-    			material: "Wood laminate; leather",
-    			_createdOn: 1615546332126,
-    			_id: "c7f51805-242b-45ed-ae3e-80b68605141b"
-    		}
-    	},
+    	// catalog: {
+    	// 	"53d4dbf5-7f41-47ba-b485-43eccb91cb95": {
+    	// 		_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+    	// 		make: "Table",
+    	// 		model: "Swedish",
+    	// 		year: 2015,
+    	// 		description: "Medium table",
+    	// 		price: 235,
+    	// 		img: "./images/table.png",
+    	// 		material: "Hardwood",
+    	// 		_createdOn: 1615545143015,
+    	// 		_id: "53d4dbf5-7f41-47ba-b485-43eccb91cb95"
+    	// 	},
+    	// 	"f5929b5c-bca4-4026-8e6e-c09e73908f77": {
+    	// 		_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+    	// 		make: "Sofa",
+    	// 		model: "ES-549-M",
+    	// 		year: 2018,
+    	// 		description: "Three-person sofa, blue",
+    	// 		price: 1200,
+    	// 		img: "./images/sofa.jpg",
+    	// 		material: "Frame - steel, plastic; Upholstery - fabric",
+    	// 		_createdOn: 1615545572296,
+    	// 		_id: "f5929b5c-bca4-4026-8e6e-c09e73908f77"
+    	// 	},
+    	// 	"c7f51805-242b-45ed-ae3e-80b68605141b": {
+    	// 		_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+    	// 		make: "Chair",
+    	// 		model: "Bright Dining Collection",
+    	// 		year: 2017,
+    	// 		description: "Dining chair",
+    	// 		price: 180,
+    	// 		img: "./images/chair.jpg",
+    	// 		material: "Wood laminate; leather",
+    	// 		_createdOn: 1615546332126,
+    	// 		_id: "c7f51805-242b-45ed-ae3e-80b68605141b"
+    	// 	}
+    	// },
     	teams: {
     		"34a1cab1-81f1-47e5-aec3-ab6c9810efe1": {
     			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
