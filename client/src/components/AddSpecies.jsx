@@ -47,7 +47,7 @@ export default function AddSpecies() {
                     <label htmlFor="foliage" className="txt4">Foliage:</label>
                     <input className="input100" type="text" name="foliage" placeholder="Foliage" />
 
-                    <label htmlFor="image" className="txt4">Image:</label>
+                    <label htmlFor="imageUrl" className="txt4">Image:</label>
                     <input className="input100" type="text" name="image" placeholder="Image" />
 
                     <label htmlFor="more" className="txt4">More:</label>
