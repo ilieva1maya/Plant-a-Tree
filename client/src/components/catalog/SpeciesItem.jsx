@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom"
+import Path from "../../paths"
+
 export default function SpeciesItem({
     _id,
     name,
@@ -11,8 +14,8 @@ export default function SpeciesItem({
 
             <h4 className="mb-4">{more}</h4>
             <div className="btn-action d-flex justify-content-center">
-                <a className="btn bg-primary py-2 px-3" style={{ color: "black" }} href=""><i className="bi bi-tree text-white"></i>Plant</a>
-                <a className="btn bg-secondary py-2 px-3" style={{ color: "black" }} href=""><i className="bi bi-eye text-white"></i>Details</a>
+                {/* <a className="btn bg-primary py-2 px-3" style={{ color: "black" }} href=""><i className="bi bi-tree text-white"></i>Plant</a> */}
+                <Link to={`${Path.Catalog}/${_id}`} className="btn bg-secondary py-2 px-3" style={{ color: "black" }}><i className="bi bi-eye text-white"></i>Details</Link>
             </div>
         </div>
     )

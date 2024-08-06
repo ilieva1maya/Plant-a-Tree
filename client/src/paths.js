@@ -2,6 +2,7 @@ const Path = {
 
     Home: '/',
     Catalog: '/catalog',
+    Details: '/catalog/:id',
     AddSpecies: '/addspecies',
     MyForest: '/myforest',
     About: '/aboutus',
@@ -12,11 +13,8 @@ const Path = {
     Register: '/register',
     Logout: '/',    
     
-    // Team: '/team',
-
-
+    // Team: '/team',   
     
-    // Details: '/games/:id',
     // Edit: '/games/:id/edit',
     // Delete: '/games/:id/delete',
 

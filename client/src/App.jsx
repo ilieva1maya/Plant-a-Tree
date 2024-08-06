@@ -14,6 +14,7 @@ import JoinUs from "./components/JoinUs"
 import Contacts from "./components/Contacts"
 import Catalog from "./components/catalog/Catalog"
 import AddSpecies from "./components/AddSpecies"
+import Details from "./components/details/Details"
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
         <Route path={Path.Login} element={<Login />} />
         <Route path={Path.Register} element={<Register/>} />
         <Route path={Path.Logout} element={<Home />} />
+        <Route path={Path.Details} element={<Details/>}/>
       </Routes>
       <Footer />
 
