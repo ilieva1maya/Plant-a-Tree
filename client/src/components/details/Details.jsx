@@ -1,18 +1,29 @@
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+
+import * as speciesService from '../../services/speciesService';
+
 export default function Details() {
+    const [tree, setTree] = useState({});
+    const { id } = useParams();
+
+    useEffect(() => {
+        speciesService.getOne(id)
+        .then(setTree)
+    }, [id])
+
     return (
         <div className="container-fluid py-5">
-            <div className="container mx-auto text-left mb-5" style={{ maxWidth: 800 }}>   
-                    <h2 className="mb-4">Key Oak facts</h2>                                       
-                    <p className="details-page mb-4">Family – Fagaceae</p>
-                    <p className="details-page mb-4">Height – 50 to 115 feet (15-35 meters)</p>
-                    <p className="details-page mb-4">Exposure – full sun</p>
-                    <p className="details-page mb-4">Soil – not too chalky</p>
-                    <p className="details-page mb-4">Foliage: deciduous</p>
-                    <p className="details-page mb-4">Often grown in parks or woods, it is only grown in our gardens if sufficient space is available.
-                        Oak is a name given to a great many trees and shrubs, all belonging to the Quercus genus.
-                        Oak, sometimes called the “King of the forest”, is remarkable for its wood, the beauty of its leaves, and its majestic inspiring silhouette, especially when it grows to be dozens of feet tall.
-                    </p>
-                    <img src="/img/oak.png" alt="Oak" />      
+            <div className="container mx-auto text-left mb-5" style={{ maxWidth: 800 }}>
+                <h2 className="mb-4 text-secondary">Key <span className="text-primary text-uppercase">{tree.name}</span> facts</h2>
+                <p className="details-page mb-4">Family – {tree.family}</p>
+                <p className="details-page mb-4">Height – {tree.height}</p>
+                <p className="details-page mb-4">Exposure – {tree.exposure}</p>
+                <p className="details-page mb-4">Soil – {tree.soil}</p>
+                <p className="details-page mb-4">Foliage: {tree.foliage}</p>
+                <p className="details-page mb-4"> {tree.more}
+                </p>
+                <img src={tree.image} alt={tree.name} />
             </div>
         </div>
     )
