@@ -13,7 +13,7 @@ export default function Details() {
         speciesService.getOne(id)
             .then(setTree)
 
-        commentService.getAll()
+        commentService.getAll(id)
             .then(setComments)
     }, [id])
 
