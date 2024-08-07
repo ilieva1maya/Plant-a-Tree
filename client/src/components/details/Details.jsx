@@ -27,7 +27,7 @@ export default function Details() {
             formData.get('comment'),
         );
 
-        console.log(newComment);
+        setComments(state => [...state, { ...newComment, author: { id } }]);
 
         // const newComment = await commentService.create(
         //     id,
@@ -56,6 +56,26 @@ export default function Details() {
                 </p>
                 <img src={tree.image} alt={tree.name} />
             </div>
+
+            <div className="container-fluid py-5">
+                    <h2>Comments:</h2>
+                    <ul>
+                        {/* <!-- list all comments for current game (If any) --> */}
+
+                        {comments.map(({ _id, text}) => (
+                            <li key={_id} className="comment">
+                                <p>{_id}: {text}</p>
+                            </li>
+                        ))}
+
+                    </ul>
+                    {/* <!-- Display paragraph: If there are no games in the database --> */}
+
+                    {comments.length === 0 && (
+                        <p className="no-comment">No comments.</p>
+                    )}
+
+                </div>
 
             <div className="container mx-auto text-left mb-5 container-login100 wrap-login100" style={{ maxWidth: 800 }}>
                 <label className="comment-form-title">Add comment</label>
