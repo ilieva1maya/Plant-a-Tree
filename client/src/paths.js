@@ -11,7 +11,7 @@ const Path = {
     Contacts: '/contactus',
     Login: '/login',
     Register: '/register',
-    Logout: '/',    
+    Logout: '/logout',    
     
     // Team: '/team',   
     

@@ -14,14 +14,14 @@ export const login = async (email, password) => {
     return result;
 }
 
-// export const register = async (email, password) => {
-//     const result = await request('POST', `${baseUrl}${Path.Register}`, {
-//         email,
-//         password,
-//     });
+export const register = async (email, password) => {
+    const result = await request('POST', `${baseUrl}${Path.Register}`, {
+        email,
+        password,
+    });
 
-//     return result;
-// }
+    return result;
+}
 
 export const logout = async () => {
     await request('GET', `${baseUrl}${Path.Logout}`);

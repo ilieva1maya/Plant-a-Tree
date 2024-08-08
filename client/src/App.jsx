@@ -17,6 +17,7 @@ import Contacts from "./components/Contacts"
 import Catalog from "./components/catalog/Catalog"
 import AddSpecies from "./components/AddSpecies"
 import Details from "./components/details/Details"
+import Logout from "./components/logout/Logout"
 
 function App() {
   return (
@@ -35,7 +36,7 @@ function App() {
           <Route path={Path.Contacts} element={<Contacts />} />
           <Route path={Path.Login} element={<Login />} />
           <Route path={Path.Register} element={<Register />} />
-          <Route path={Path.Logout} element={<Home />} />
+          <Route path={Path.Logout} element={<Logout />} />
           <Route path={Path.Details} element={<Details />} />
         </Routes>
         <Footer />
