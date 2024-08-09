@@ -26,7 +26,7 @@ export default function NavBar() {
                     <Link to={Path.Contacts} className="nav-item nav-link">Contact Us</Link>
 
                     {isAuthenticated && (
-                        <div id="user">
+                        <div className="navbar-nav mx-auto py-0">
                             <Link to={Path.AddSpecies} className="nav-item nav-link">Add Species</Link>
                             <Link to={Path.MyForest} className="nav-item nav-link">My Forest</Link>
                             <Link to={Path.Contributors} className="nav-item nav-link">Our Contributors</Link>
@@ -37,7 +37,7 @@ export default function NavBar() {
                     )}
 
                     {!isAuthenticated && (
-                        <div id="guest">
+                        <div className="navbar-nav mx-auto py-0">
                             <Link to={Path.Login} className="nav-item nav-link">Login</Link>
                             <Link to={Path.Register} className="nav-item nav-link">Register</Link>
                         </div>

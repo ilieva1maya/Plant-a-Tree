@@ -69,7 +69,7 @@ export default function Footer() {
             </div> */}
             <div className="container-fluid bg-dark text-white py-4">
                 <div className="container text-center">
-                    <p className="mb-0">&copy; <a className="text-secondary fw-bold" href="#">Plant a Tree</a>. All Rights Reserved. Designed by <a className="text-secondary fw-bold" href="https://htmlcodex.com">HTML Codex</a></p>
+                    <p className="mb-0">&copy; <a className="text-secondary fw-bold" href="#">Plant a Tree</a>. All Rights Reserved. Designed by <a className="text-secondary fw-bold" href="https://github.com/ilieva1maya">Maya Ilieva</a></p>
                 </div>
             </div>
         </>

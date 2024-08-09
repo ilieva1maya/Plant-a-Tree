@@ -1,3 +1,7 @@
+import { Link } from "react-router-dom"
+import Path from "../../paths"
+
+
 export default function Register() {
     return(
         
@@ -27,7 +31,7 @@ export default function Register() {
 
 					<div className="container-login100-form-btn">
 						<button className="login100-form-btn">
-							Sign up
+							Register
 						</button>
 					</div>
 
@@ -36,9 +40,11 @@ export default function Register() {
 							Already have an account?
 						</span>
 
+						<Link to={Path.Login} className="txt3">Login here</Link>
+{/* 
 						<a href="#" className="txt3">
 							Sign in here
-						</a>
+						</a> */}
 					</div>
 				</form>
 			</div>
