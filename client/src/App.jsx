@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom"
 import { AuthProvider } from "./contexts/authContext"
 
 import TopBar from "./components/TopBar"
-import NavBar from "./components/NavBar"
+import NavBar from "./components/navbar/NavBar"
 import About from "./components/About"
 import Footer from "./components/Footer"
 import Path from "./paths"
@@ -13,18 +13,19 @@ import Register from "./components/register/Register"
 import MyForest from "./components/MyForest"
 import Contributors from "./components/Contributors"
 import JoinUs from "./components/JoinUs"
-import Contacts from "./components/Contacts"
+import ContactUs from "./components/contacts/ContacUs"
 import Catalog from "./components/catalog/Catalog"
 import AddSpecies from "./components/AddSpecies"
 import Details from "./components/details/Details"
 import Logout from "./components/logout/Logout"
+
 
 function App() {
   return (
     <AuthProvider>
       <div id="box">
         <TopBar />
-        <NavBar />
+        <NavBar/>
         <Routes>
           <Route path={Path.Home} element={<Home />} />
           <Route path={Path.Catalog} element={<Catalog />} />
@@ -33,7 +34,7 @@ function App() {
           <Route path={Path.About} element={<About />} />
           <Route path={Path.Contributors} element={<Contributors />} />
           <Route path={Path.JoinUs} element={<JoinUs />} />
-          <Route path={Path.Contacts} element={<Contacts />} />
+          <Route path={Path.Contacts} element={<ContactUs/>} />
           <Route path={Path.Login} element={<Login />} />
           <Route path={Path.Register} element={<Register />} />
           <Route path={Path.Logout} element={<Logout />} />
