@@ -1,19 +1,5 @@
-// // import Banner from "../Banner";
-// import Carousel from "../Carousel";
-// // import Facts from "../Facts";
-
 import { Link } from "react-router-dom";
 import Path from "../../paths";
-
-// export default function Home() {
-//     return (
-//         <>            
-//             <Carousel />
-//             {/* <Banner /> */}
-//             {/* <Facts /> */}
-//         </>
-//     )
-// }
 
 export default function Home() {
     return (

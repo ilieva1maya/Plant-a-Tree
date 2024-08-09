@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import Path from "../paths";
+
 export default function TopBar() {
     return (
         <div className="container-fluid px-5 d-none d-lg-block">
@@ -10,17 +13,18 @@ export default function TopBar() {
                 </div>
                 <div className="col-lg-6">
                     <div className="d-flex align-items-center justify-content-center">
-                        <a href="index.html" className="navbar-brand ms-lg-5">
-                            <h1 className="m-0 display-4 text-primary"><span className="text-secondary">Plant</span>Tree</h1>
-                        </a>
+
+                        <Link to={Path.Home} className="navbar-brand ms-lg-5">                           
+                            <h1 className="m-0 display-4 text-primary">Plant<span className="text-secondary"> a </span>Tree</h1>
+                        </Link>
+
                     </div>
                 </div>
                 <div className="col-lg-3">
                     <div className="d-flex align-items-center justify-content-end">
-                        <a className="btn btn-primary btn-square rounded-circle me-2" href="#"><i className="fab fa-twitter"></i></a>
-                        <a className="btn btn-primary btn-square rounded-circle me-2" href="#"><i className="fab fa-facebook-f"></i></a>
-                        <a className="btn btn-primary btn-square rounded-circle me-2" href="#"><i className="fab fa-linkedin-in"></i></a>
-                        <a className="btn btn-primary btn-square rounded-circle" href="#"><i className="fab fa-instagram"></i></a>
+                        <a className="btn btn-primary btn-square rounded-circle me-2" href="https://www.facebook.com/"><i className="fab fa-facebook-f"></i></a>
+                        <a className="btn btn-primary btn-square rounded-circle me-2" href="https://www.linkedin.com/"><i className="fab fa-linkedin-in"></i></a>
+                        <a className="btn btn-primary btn-square rounded-circle" href="https://www.instagram.com/"><i className="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
