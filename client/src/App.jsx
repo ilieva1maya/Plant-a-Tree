@@ -1,13 +1,13 @@
 import { Routes, Route } from "react-router-dom"
 
 import { AuthProvider } from "./contexts/authContext"
-import AuthGuard from "./components/guards/AuthGuard"
+import Path from "./paths"
 
+import AuthGuard from "./components/guards/AuthGuard"
 import TopBar from "./components/TopBar"
 import NavBar from "./components/navbar/NavBar"
-import About from "./components/About"
+import About from "./components/aboutUs/About"
 import Footer from "./components/Footer"
-import Path from "./paths"
 import Login from "./components/login/Login"
 import Home from "./components/home/Home"
 import Register from "./components/register/Register"
@@ -16,9 +16,10 @@ import Contributors from "./components/Contributors"
 import JoinUs from "./components/JoinUs"
 import ContactUs from "./components/contacts/ContacUs"
 import Catalog from "./components/catalog/Catalog"
-import AddSpecies from "./components/AddSpecies"
+import AddSpecies from "./components/addSpecies/AddSpecies"
 import Details from "./components/details/Details"
 import Logout from "./components/logout/Logout"
+
 
 function App() {
   return (
