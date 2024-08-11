@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import * as speciesService from "../../services/speciesService"
 import SpeciesItem from "./SpeciesItem";
+import { Link } from "react-router-dom";
+import Path from "../../paths";
 
 export default function Catalog() {
 
@@ -14,17 +16,26 @@ export default function Catalog() {
     return (
         <div className="container-fluid py-5">
             <div className="container">
-                <div className="mx-auto text-center mb-5" style={{ maxWidth: 800 }}>
-                    <h3>Please choose from the <span className="text-primary text-uppercase">trees</span> listed below</h3>
-                </div>
                 {/* <div className="owl-carousel product-carousel px-5"> */}
                 <div>
+
+                    {species.length > 0 && (
+                        <div className="mx-auto text-center mb-5" style={{ maxWidth: 800 }}>
+                            <h3>Please choose from the <span className="text-primary text-uppercase">trees</span> listed below</h3>
+                        </div>
+                    )}
 
                     {species.map(tree => (
                         <SpeciesItem key={tree._id}{...tree} />
                     ))}
 
-                    {species.length === 0 && (<h3 className="">Sorry, we do not have trees in our catalog. Be the first to add</h3>)}
+                    {species.length === 0 && (
+                        <div className="mx-auto text-center mb-5" style={{ maxWidth: 800 }}>
+                            <h3 className="mb-5">Sorry, we do not have trees in our catalog. 
+                                Be the first to <Link to={Path.AddSpecies}><h3 className="text-primary text-uppercase">add</h3></Link></h3>
+                            <img className="w-100" src="img/TreeToAdd.jpg" alt="Forest" />
+                        </div>
+                    )}
 
                     {/* <div className="pb-5">
                         <h3 className="mb-3"> <span className="text-secondary text-uppercase">Ginkgo biloba</span>, superb in every season</h3>
