@@ -15,7 +15,7 @@ export default function NavBar() {
 
             <div className="collapse navbar-collapse" id="navbarCollapse">
                 <div className="navbar-nav mx-auto py-0">
-                    <Link to={Path.Home} className="nav-item nav-link active">Home</Link>
+                    <Link to={Path.Home} className="nav-item nav-link">Home</Link>
                     <Link to={Path.Catalog} className="nav-item nav-link">Catalog</Link>
                     <Link to={Path.About} className="nav-item nav-link">About us</Link>
                     <Link to={Path.Contacts} className="nav-item nav-link">Contact Us</Link>

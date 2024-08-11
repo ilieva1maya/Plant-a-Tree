@@ -1,4 +1,4 @@
-import * as speciesService from "../services/speciesService";
+import * as speciesService from "../../services/speciesService";
 import { useNavigate } from "react-router-dom";
 
 export default function AddSpecies() {

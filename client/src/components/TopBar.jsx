@@ -8,7 +8,7 @@ export default function TopBar() {
                 <div className="col-lg-3">
                     <div className="d-flex align-items-center justify-content-start">
                         <i className="bi bi-phone-vibrate fs-1 text-primary me-2"></i>
-                        <h2 className="mb-0">+012 345 6789</h2>
+                        <h2 className="mb-0">+359 2 987 65 43</h2>
                     </div>
                 </div>
                 <div className="col-lg-6">
