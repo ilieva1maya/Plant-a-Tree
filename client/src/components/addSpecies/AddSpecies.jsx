@@ -22,43 +22,55 @@ export default function AddSpecies() {
 
 
     return (
+        <div className="container-fluid about pt-5">
+            <div className="container mb-3">
+                <div className="row gx-5">
 
-        <div id="create-page" className="auth">
-            <form onSubmit={addSpeciesSubmitHandler}>
-                <div className="container-add">
+                    <div className="col-lg-6 mb-5 mb-lg-0">
+                        <div className="d-flex h-100">
+                            <img className="img-fluid mt-0 mx-auto" src="img/types-of-trees_all.jpg" />
+                        </div>
+                    </div>
+                    <div className="col-lg-6">
+                        <div className="row gx-5" id="create-page" >
+                            <form onSubmit={addSpeciesSubmitHandler}>
+                                <div className="container-add">
 
-                    <h3>In botany, a tree is a perennial plant with an elongated stem, or trunk. Usually supporting branches and leaves. </h3>
+                                    <label htmlFor="name" className="txt4">Species Name:</label>
+                                    <input className="input100" type="text" name="name" placeholder="Name" />
 
-                    <label htmlFor="name" className="txt4">Species Name:</label>
-                    <input className="input100" type="text" name="name" placeholder="Name" />
+                                    {/* <label htmlFor="family" className="txt4">Family:</label>
+                                    <input className="input100" type="text" name="family" placeholder="Family" /> */}
 
-                    <label htmlFor="family" className="txt4">Family:</label>
-                    <input className="input100" type="text" name="family" placeholder="Family" />
+                                    <label htmlFor="height" className="txt4">Height:</label>
+                                    <input className="input100" type="text" name="height" placeholder="Height" />
 
-                    <label htmlFor="height" className="txt4">Height:</label>
-                    <input className="input100" type="text" name="height" placeholder="Height" />
+                                    <label htmlFor="exposure" className="txt4">Exposure:</label>
+                                    <input className="input100" type="text" name="exposure" placeholder="Exposure" />
 
-                    <label htmlFor="exposure" className="txt4">Exposure:</label>
-                    <input className="input100" type="text" name="exposure" placeholder="Exposure" />
+                                    <label htmlFor="soil" className="txt4">Soil:</label>
+                                    <input className="input100" type="text" name="soil" placeholder="Soil" />
 
-                    <label htmlFor="soil" className="txt4">Soil:</label>
-                    <input className="input100" type="text" name="soil" placeholder="Soil" />
+                                    {/* <label htmlFor="foliage" className="txt4">Foliage:</label>
+                                    <input className="input100" type="text" name="foliage" placeholder="Foliage" /> */}
 
-                    <label htmlFor="foliage" className="txt4">Foliage:</label>
-                    <input className="input100" type="text" name="foliage" placeholder="Foliage" />
+                                    <label htmlFor="imageUrl" className="txt4">Image:</label>
+                                    <input className="input100" type="text" name="image" placeholder="Image" />
 
-                    <label htmlFor="imageUrl" className="txt4">Image:</label>
-                    <input className="input100" type="text" name="image" placeholder="Image" />
+                                    <label htmlFor="more" className="txt4">More:</label>
+                                    <input className="input100" type="text" name="more" placeholder="Tell us something interesting..." />
 
-                    <label htmlFor="more" className="txt4">More:</label>
-                    <input className="input100" type="text" name="more" placeholder="Tell us something interesting..." />
+                                    <button className="login100-form-btn">
+                                        Add Species
+                                    </button>
 
-                    <button className="login100-form-btn">
-                        Add Species
-                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
 
                 </div>
-            </form>
+            </div>
         </div>
     )
 }
