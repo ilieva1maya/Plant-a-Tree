@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import Path from "../../paths";
 
 export default function ContactUs() {
 
@@ -7,7 +8,7 @@ export default function ContactUs() {
         e.preventDefault();
 
         alert('Thanks for contacting us! We will come back to you shortly!');
-        navigate('/');
+        navigate(Path.Home);
     }
 
     return (
