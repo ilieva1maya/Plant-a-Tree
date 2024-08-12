@@ -13,13 +13,12 @@ import Home from "./components/home/Home"
 import Register from "./components/register/Register"
 import MyForest from "./components/MyForest"
 import Contributors from "./components/Contributors"
-import JoinUs from "./components/JoinUs"
+import JoinUs from "./components/joinUs/JoinUs"
 import ContactUs from "./components/contacts/ContacUs"
 import Catalog from "./components/catalog/Catalog"
 import AddSpecies from "./components/addSpecies/AddSpecies"
 import Details from "./components/details/Details"
 import Logout from "./components/logout/Logout"
-
 
 function App() {
   return (
