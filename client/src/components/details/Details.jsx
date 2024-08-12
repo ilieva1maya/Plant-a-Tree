@@ -100,11 +100,7 @@ export default function Details() {
 
         <div className="container-fluid about pt-5">
             <div className="container">
-                <div className="mx-auto text-center mb-3" style={{ maxWidth: 500 }}>
-                    <h2 className="mb-4 text-secondary">Key <span className="text-primary text-uppercase">{tree.name}</span> facts</h2>
-                </div>
                 <div className="row gx-5">
-
                     <div className="col-lg-6 mb-5 mb-lg-0">
                         <div className="d-flex h-100">
                             <img className="img-fluid mt-0 mx-auto" src={tree.image} alt={tree.name} />
@@ -113,12 +109,16 @@ export default function Details() {
 
                     <div className="col-lg-6 pb-5 h-100 p-5">
                         <div className="col-lg-12 mb-5 mb-lg-0" style={{ maxWidth: 800 }}>
+                            <h2 className="mb-4 text-secondary">Key <span className="text-primary text-uppercase">{tree.name}</span> facts</h2>
                             <p className="details-page mb-4">Height – {tree.height}</p>
                             <p className="details-page mb-4">Exposure – {tree.exposure}</p>
                             <p className="details-page mb-4">Soil – {tree.soil}</p>
                             <p className="details-page mb-4"> {tree.more}
                             </p>
-                        </div>
+                        </div> 
+                                                
+                        <a className="btn bg-primary py-2 px-3" style={{ color: "black" }} href=""><i className="bi bi-tree text-white"></i>Plant</a>
+                        {/* <Link to={`${Path.Catalog}/${_id}`} className="btn bg-secondary py-2 px-3" style={{ color: "black" }}><i className="bi bi-tree text-white"></i>Plant</Link> */}
                     </div>
 
                 </div>
