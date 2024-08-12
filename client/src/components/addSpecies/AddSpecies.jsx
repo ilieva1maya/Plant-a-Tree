@@ -19,10 +19,7 @@ export default function AddSpecies() {
 
     return (
         <div className="container-fluid about pt-5">
-            <div className="container">
-                <div className="mx-auto text-center mb-5" style={{ maxWidth: 500 }}>
-                    <h3 className="text-primary text-uppercase">Add Tree</h3>
-                </div>
+            <div className="container">  
                 <div className="row gx-5 mb-5">
 
                     <div className="col-lg-6 mb-5 mb-lg-0">
@@ -51,7 +48,11 @@ export default function AddSpecies() {
                                     <input type="text" name="soil" className="form-control bg-light border-0 px-4" placeholder="Soil" style={{ height: 55 }} />
                                 </div>
                                 <div className="col-12">
-                                    <label htmlFor="imageUrl" className="txt4 text-primary">Image:</label>
+                                    <label htmlFor="needs" className="txt4 text-primary">Needs:</label>
+                                    <input type="text" name="needs" className="form-control bg-light border-0 px-4" placeholder="Needs" style={{ height: 55 }} />
+                                </div>
+                                <div className="col-12">
+                                    <label htmlFor="image" className="txt4 text-primary">Image:</label>
                                     <input type="text" name="image" className="form-control bg-light border-0 px-4" placeholder="Image" style={{ height: 55 }} />
                                 </div>
                                 <div className="col-12">
