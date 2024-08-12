@@ -18,6 +18,7 @@ import ContactUs from "./components/contacts/ContacUs"
 import Catalog from "./components/catalog/Catalog"
 import AddSpecies from "./components/addSpecies/AddSpecies"
 import Details from "./components/details/Details"
+import Edit from "./components/edit/Edit"
 import Logout from "./components/logout/Logout"
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
             <Route path={Path.AddSpecies} element={<AddSpecies />} />
             <Route path={Path.MyForest} element={<MyForest />} />
             <Route path={Path.Details} element={<Details />} />
+            <Route path={Path.Edit} element={<Edit />} />
             <Route path={Path.Contributors} element={<Contributors />} />
             <Route path={Path.JoinUs} element={<JoinUs />} />
             <Route path={Path.Logout} element={<Logout />} />
