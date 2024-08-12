@@ -3,6 +3,7 @@ const Path = {
     Home: '/',
     Catalog: '/catalog',
     Details: '/catalog/:id',
+    Edit: '/catalog/:id/edit',
     AddSpecies: '/addspecies',
     MyForest: '/myforest',
     About: '/aboutus',
@@ -13,11 +14,7 @@ const Path = {
     Register: '/register',
     Logout: '/logout',    
     
-    // Team: '/team',   
-    
-    // Edit: '/games/:id/edit',
     // Delete: '/games/:id/delete',
-
 }
 
 export default Path
