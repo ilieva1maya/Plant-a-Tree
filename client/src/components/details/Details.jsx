@@ -44,30 +44,95 @@ export default function Details() {
     };
 
     return (
-        <div className="container-fluid py-5">
-            <div className="container mx-auto text-left mb-5" style={{ maxWidth: 800 }}>
-                <h2 className="mb-4 text-secondary">Key <span className="text-primary text-uppercase">{tree.name}</span> facts</h2>
-                {/* <p className="details-page mb-4">Family – {tree.family}</p> */}
-                <p className="details-page mb-4">Height – {tree.height}</p>
-                <p className="details-page mb-4">Exposure – {tree.exposure}</p>
-                <p className="details-page mb-4">Soil – {tree.soil}</p>
-                {/* <p className="details-page mb-4">Foliage: {tree.foliage}</p> */}
-                <p className="details-page mb-4"> {tree.more}
-                </p>
-                <img src={tree.image} alt={tree.name} />
-            </div>
 
-            <div className="container-fluid py-5">
+        // <div className="container-fluid py-5">
+        //     <div className="container">
+        //         <div className="mx-auto text-center mb-5" style={{ maxWidth: 800 }}>
+        //             <h2 className="mb-4 text-secondary">Key <span className="text-primary text-uppercase">{tree.name}</span> facts</h2>
+        //         </div>
+        //         <div className="row gx-5 mb-5">
+        //             <div className="col-lg-6 mb-5 mb-lg-0" style={{ maxWidth: 800 }}>
+        //                 <p className="details-page mb-4">Height – {tree.height}</p>
+        //                 <p className="details-page mb-4">Exposure – {tree.exposure}</p>
+        //                 <p className="details-page mb-4">Soil – {tree.soil}</p>
+        //                 <p className="details-page mb-4"> {tree.more}
+        //                 </p>
+        //             </div>
+        //             <div>
+        //                 <div className="col-lg-6 mb-5 mb-lg-0" style={{ maxWidth: 800 }}>
+        //                 <div className="d-flex h-100">
+        //                     <img src={tree.image} alt={tree.name} />
+        //                     </div>
+        //                 </div>
+        //             </div>
+        //         </div>
+
+        //         <div className="container-fluid py-5">
+        //             <h2>Comments:</h2>
+        //             <ul>
+        //                 {/* <!-- list all comments for current game (If any) --> */}
+
+        //                 {comments.map(({ _id, text }) => (
+        //                     <li key={_id} className="comment">
+        //                         <p>{_id}: {text}</p>
+        //                     </li>
+        //                 ))}
+
+        //             </ul>
+        //             {/* <!-- Display paragraph: If there are no games in the database --> */}
+
+        //             {comments.length === 0 && (
+        //                 <p className="no-comment">No comments.</p>
+        //             )}
+
+        //         </div>
+
+        //         <div className="container mx-auto text-left mb-5 container-login100 wrap-login100" style={{ maxWidth: 800 }}>
+        //             <label className="comment-form-title">Add comment</label>
+        //             <form className="login100-form validate-form p-l-55 p-r-55 p-t-150" onSubmit={addCommentHandler}>
+        //                 <textarea name="comment" placeholder="Share your opinion......" style={{ width: 400 }} ></textarea>
+        //                 <input className="input100" type="submit" value="Add Comment" />
+        //             </form>
+        //         </div>
+
+        //     </div>
+        // </div>
+
+        <div className="container-fluid about pt-5">
+            <div className="container">
+                <div className="mx-auto text-center mb-3" style={{ maxWidth: 500 }}>
+                    <h2 className="mb-4 text-secondary">Key <span className="text-primary text-uppercase">{tree.name}</span> facts</h2>
+                </div>
+                <div className="row gx-5">
+
+                    <div className="col-lg-6 mb-5 mb-lg-0">
+                        <div className="d-flex h-100">
+                            <img className="img-fluid mt-0 mx-auto" src={tree.image} alt={tree.name} />
+                        </div>
+                    </div>
+
+                    <div className="col-lg-6 pb-5 h-100 p-5">
+                        <div className="col-lg-12 mb-5 mb-lg-0" style={{ maxWidth: 800 }}>
+                            <p className="details-page mb-4">Height – {tree.height}</p>
+                            <p className="details-page mb-4">Exposure – {tree.exposure}</p>
+                            <p className="details-page mb-4">Soil – {tree.soil}</p>
+                            <p className="details-page mb-4"> {tree.more}
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div className="container-fluid py-3">
                     <h2>Comments:</h2>
                     <ul>
                         {/* <!-- list all comments for current game (If any) --> */}
 
-                        {comments.map(({ _id, text}) => (
+                        {comments.map(({ _id, text }) => (
                             <li key={_id} className="comment">
                                 <p>{_id}: {text}</p>
                             </li>
                         ))}
-
                     </ul>
                     {/* <!-- Display paragraph: If there are no games in the database --> */}
 
@@ -77,14 +142,15 @@ export default function Details() {
 
                 </div>
 
-            <div className="container mx-auto text-left mb-5 container-login100 wrap-login100" style={{ maxWidth: 800 }}>
-                <label className="comment-form-title">Add comment</label>
-                <form className="login100-form validate-form p-l-55 p-r-55 p-t-150" onSubmit={addCommentHandler}>
-                    <textarea name="comment" placeholder="Share your opinion......" style={{ width: 400 }} ></textarea>
-                    <input className="input100" type="submit" value="Add Comment" />
-                </form>
-            </div>
+                <div className="container mx-auto text-left mb-5 container-login100 wrap-login100" style={{ maxWidth: 800 }}>
+                    <label className="comment-form-title bg-primary">Add comment</label>
+                    <form className="login100-form validate-form p-l-55 p-r-55 p-t-70" onSubmit={addCommentHandler}>
+                        <textarea name="comment" placeholder="Share your opinion......" style={{ width: 400 }} ></textarea>
+                        <input className="input100 bg-secondary" type="submit" value="Add Comment" />
+                    </form>
+                </div>
 
+            </div>
         </div>
     )
 }

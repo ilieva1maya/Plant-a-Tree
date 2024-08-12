@@ -18,7 +18,7 @@ export default function JoinUs() {
                     <h3 className="text-primary text-uppercase">Join Our Team</h3>
                 </div>
                 <div className="row gx-5 mb-5">
-                    <div className="col-lg-6 pb-5 bg-primary h-100 p-5">
+                    <div className="col-lg-6 pb-5 h-100 p-5">
                         <form onSubmit={joinUs}>
                             <div className="row g-3">
                                 <div className="col-7">
