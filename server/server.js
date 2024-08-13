@@ -1340,17 +1340,18 @@
     };
     var seedData = {
         catalog: {
-            "0132a278-5a93-42ef-99e2-3dd81503a6bc":
+            "a283280e-17ae-4aa1-b568-d23546580681":
             {
-                name: "Oak",
-                family: "Fagaceae",
-                height: "15-35 meters",
-                exposure: "full sun",
-                soil: "not too chalky",
-                foliage: "deciduous",
-                image: "img/oak.png",
-                more: "Often grown in parks or woods, it is only grown in our gardens if sufficient space is available",
-                _id: "0132a278-5a93-42ef-99e2-3dd81503a6bc"
+                _ownerId: "7749fa5f-d3da-4a90-b117-36697033515f",
+                name: "Strawberry tree",
+                height: "6 ½ to 16 feet (2 to 5 meters)",
+                exposure: "full sun, part sun",
+                soil: "ordinary",
+                needs: "For hedges, space the trees at least 32 inches (80 cm) apart.",
+                image: "https://www.nature-and-garden.com/wp-content/uploads/sites/4/2017/08/strawberry-tree.jpg",
+                more: "Easy to care for, it adapts to all soil types, either in beds or in hedges, or in pots or garden boxes for a terrace.  You may plant it as a standalone and also as part of a hedge to decorate your hedge in winter thanks to its ornamental berries.",
+                _createdOn: 1723554817528,
+                _id: "a283280e-17ae-4aa1-b568-d23546580681"
             }
         },
         games: {
