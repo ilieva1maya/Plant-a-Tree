@@ -5,9 +5,6 @@ const baseUrl = 'http://localhost:3030/data/catalog'
 export const getAll = async () => {
     const result = await request('GET', baseUrl);
     return result;
-
-    // само за jsonstore
-    // return Object.values(result);
 }
 
 export const getLatest = async () => {
@@ -15,7 +12,7 @@ export const getLatest = async () => {
         // sortBy: `_createdOn desc`,        
         offset: 0,
         pageSize: 2,
-    })
+    });
 
     const result = await request('GET', `${baseUrl}?${query}`);
 
@@ -31,16 +28,13 @@ export const getOne = async (id) => {
 }
 
 export const create = async (speciesData) => {
-
     const result = await request('POST', baseUrl, speciesData);
-
-    return result
+    return result;
 }
 
 export const edit = async (id, speciesData) => {
     const result = await request('PUT', `${baseUrl}/${id}`, speciesData);
-
-    return result
+    return result;
 }
 
 export const remove = async (id) => request('DELETE', `${baseUrl}/${id}`);
