@@ -5,7 +5,6 @@ import Path from "../paths";
 import usePersistedState from "../hooks/usePersistedState";
 
 const AuthContext = createContext();
-console.log(AuthContext);
 
 export const AuthProvider = ({
     children,
