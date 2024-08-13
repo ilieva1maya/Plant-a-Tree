@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 import * as speciesService from '../../services/speciesService';
 import * as commentService from '../../services/commentService';
+import Path from "../../paths";
+import { pathToUrl } from "../../utils/pathUtils";
 
 export default function Details() {
     const [tree, setTree] = useState({});
@@ -113,12 +115,21 @@ export default function Details() {
                             <p className="details-page mb-4">Height – {tree.height}</p>
                             <p className="details-page mb-4">Exposure – {tree.exposure}</p>
                             <p className="details-page mb-4">Soil – {tree.soil}</p>
+                            <p className="details-page mb-4">Needs – {tree.needs}</p>
                             <p className="details-page mb-4"> {tree.more}
                             </p>
-                        </div> 
-                                                
-                        <a className="btn bg-primary py-2 px-3" style={{ color: "black" }} href=""><i className="bi bi-tree text-white"></i>Plant</a>
-                        {/* <Link to={`${Path.Catalog}/${_id}`} className="btn bg-secondary py-2 px-3" style={{ color: "black" }}><i className="bi bi-tree text-white"></i>Plant</Link> */}
+                        </div>
+
+                        {/* <a className="btn bg-primary py-2 px-3" style={{ color: "black" }} href=""><i className="bi bi-tree text-white"></i>Plant</a> */}
+                        
+                        <div className="buttons">
+
+                        {/* <Link to={pathToUrl(Path.Edit, { id })} className="button">Edit</Link> */}
+                        {/* <Link to={pathToUrl(Path.Delete, { id })} className="button">Delete</Link> */}
+                        {/* <button className="button" onClick={deleteButtonHandler}>Delete</button> */}
+      
+                    </div>
+
                     </div>
 
                 </div>
