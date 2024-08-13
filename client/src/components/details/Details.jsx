@@ -124,7 +124,7 @@ export default function Details() {
                         
                         <div className="buttons">
 
-                        {/* <Link to={pathToUrl(Path.Edit, { id })} className="button">Edit</Link> */}
+                        <Link to={pathToUrl(Path.Edit, { id })} className="btn bg-primary py-2 px-3" style={{ color: "black" }}><i className="bi bi-tree text-white"></i>Edit</Link>
                         {/* <Link to={pathToUrl(Path.Delete, { id })} className="button">Delete</Link> */}
                         {/* <button className="button" onClick={deleteButtonHandler}>Delete</button> */}
       
