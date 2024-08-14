@@ -2,19 +2,18 @@ const Path = {
 
     Home: '/',
     Catalog: '/catalog',
+    About: '/aboutus',
+    AddSpecies: '/addspecies',
     Details: '/catalog/:id',
     Edit: '/catalog/:id/edit',
-    AddSpecies: '/addspecies',
+    Delete: '/catalog/:id/delete',
     MyForest: '/myforest',
-    About: '/aboutus',
     Contributors: '/ourcontributors',
     JoinUs: '/joinus',
     Contacts: '/contactus',
     Login: '/login',
     Register: '/register',
-    Logout: '/logout',    
-    
-    // Delete: '/games/:id/delete',
+    Logout: '/logout',
 }
 
 export default Path

@@ -1,49 +1,63 @@
-import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useContext, useEffect, useReducer, useState } from "react";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 import * as speciesService from '../../services/speciesService';
 import * as commentService from '../../services/commentService';
 import Path from "../../paths";
 import { pathToUrl } from "../../utils/pathUtils";
+import AuthContext from "../../contexts/authContext";
+import reducer from "./commentReducer";
+import useForm from "../../hooks/useForm";
 
 export default function Details() {
+    const { email, userId } = useContext(AuthContext);
     const [tree, setTree] = useState({});
-    const [comments, setComments] = useState([]);
+    const [comments, dispatch] = useReducer(reducer, []);
     const { id } = useParams();
+    const navigate = useNavigate();
 
     useEffect(() => {
         speciesService.getOne(id)
             .then(setTree)
 
         commentService.getAll(id)
-            .then(setComments)
+            .then((result) => {
+                dispatch({
+                    type: 'GET_ALL__COMMENTS',
+                    payload: result,
+                })
+            })
     }, [id])
 
-    const addCommentHandler = async (e) => {
-        e.preventDefault();
-
-        const formData = new FormData(e.currentTarget);
+    const addCommentHandler = async (values) => {
 
         const newComment = await commentService.create(
             id,
-            formData.get('comment'),
+            values.comment,
         );
 
-        setComments(state => [...state, { ...newComment, author: { id } }]);
+        newComment.owner = { email };
 
-        // const newComment = await commentService.create(
-        //     id,
-        //     values.comment,
-        // );
-
-        //     newComment.owner = { email };
-
-        //     // setComments(state => [...state, { ...newComment, author: { email } }]);
-        //     dispatch({
-        //         type: 'ADD_COMMENT',
-        //         payload: newComment
-        //     });
+        dispatch({
+            type: 'ADD_COMMENT',
+            payload: newComment
+        });
     };
+
+    const deleteButtonHandler = async () => {
+        const hasConfirmed = confirm(`Are you sure you want to delete ${game.title}?`);
+
+        if (hasConfirmed) {
+            await speciesService.remove(id);
+            navigate(Path.Catalog);
+        }
+    };
+
+    const { values, onChange, onSubmit } = useForm(addCommentHandler, {
+        comment: '',
+    });
+
+    const isOwner = userId === tree._ownerId;
 
     return (
 
@@ -121,14 +135,15 @@ export default function Details() {
                         </div>
 
                         {/* <a className="btn bg-primary py-2 px-3" style={{ color: "black" }} href=""><i className="bi bi-tree text-white"></i>Plant</a> */}
-                        
-                        <div className="buttons">
 
-                        <Link to={pathToUrl(Path.Edit, { id })} className="btn bg-primary py-2 px-3" style={{ color: "black" }}><i className="bi bi-tree text-white"></i>Edit</Link>
-                        {/* <Link to={pathToUrl(Path.Delete, { id })} className="button">Delete</Link> */}
-                        {/* <button className="button" onClick={deleteButtonHandler}>Delete</button> */}
-      
-                    </div>
+                        {isOwner && (
+                        <div className="buttons d-flex justify-content-center">
+                            <Link to={pathToUrl(Path.Edit, { id })} className="btn bg-primary py-2 px-5" style={{ color: "black", margin: '2em' }}>Edit</Link>
+                            {/* <Link to={pathToUrl(Path.Delete, { id })} className="btn bg-secondary py-2 px-3 mr-3" style={{ color: "black" }}>Delete</Link> */}
+                            <button className="btn bg-secondary py-2 px-5 " style={{ color: "black", margin: '2em' }} onClick={deleteButtonHandler}>Delete</button>
+
+                        </div>
+                        )}
 
                     </div>
 
@@ -139,9 +154,9 @@ export default function Details() {
                     <ul>
                         {/* <!-- list all comments for current game (If any) --> */}
 
-                        {comments.map(({ _id, text }) => (
+                        {comments.map(({ _id, text, owner: { email } }) => (
                             <li key={_id} className="comment">
-                                <p>{_id}: {text}</p>
+                                <p>{email}: {text}</p>
                             </li>
                         ))}
                     </ul>
@@ -155,8 +170,8 @@ export default function Details() {
 
                 <div className="container mx-auto text-left mb-5 container-login100 wrap-login100" style={{ maxWidth: 800 }}>
                     <label className="comment-form-title bg-primary">Add comment</label>
-                    <form className="login100-form validate-form p-l-55 p-r-55 p-t-70" onSubmit={addCommentHandler}>
-                        <textarea name="comment" placeholder="Share your opinion......" style={{ width: 400 }} ></textarea>
+                    <form className="login100-form validate-form p-l-55 p-r-55 p-t-70" onSubmit={onSubmit}>
+                        <textarea name="comment" value={values.comment} onChange={onChange} placeholder="Share your opinion......" style={{ width: 400 }} ></textarea>
                         <input className="input100 bg-secondary" type="submit" value="Add Comment" />
                     </form>
                 </div>
