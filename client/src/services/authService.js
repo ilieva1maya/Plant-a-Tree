@@ -3,8 +3,6 @@ import Path from "../paths";
 
 const baseUrl = 'http://localhost:3030/users';
 
-
-
 export const login = async (email, password) => {
     const result = await request('POST', `${baseUrl}${Path.Login}`, {
         email,
