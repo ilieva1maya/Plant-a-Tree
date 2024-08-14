@@ -2,7 +2,7 @@ import { useContext } from "react";
 import useForm from "../../hooks/useForm";
 import AuthContext from "../../contexts/authContext";
 import Path from "../../paths";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const LoginFormKeys = {
 	Email: 'email',
@@ -15,8 +15,16 @@ export default function Login() {
 		[LoginFormKeys.Email]: '',
 		[LoginFormKeys.Password]: '',
 	});
-	return (
 
+	const navigate = useNavigate();
+	const forgottenPassword = async (e) => {
+        e.preventDefault();
+
+        prompt('Please type your email \nPlease follow the steps in your email for password recovery');
+        navigate(Path.Home);
+    }
+
+	return (
 		<div className="container-login100">
 			<div className="wrap-login100">
 				<form className="login100-form validate-form p-l-55 p-r-55 p-t-150" onSubmit={onSubmit}>
@@ -39,7 +47,7 @@ export default function Login() {
 					</div>
 
 					<div className="text-right p-t-13 p-b-23">
-						<a href="#" className="txt2">
+						<a href="#" className="txt2" onClick={forgottenPassword}>
 							Forgot Username / Password?
 						</a>
 					</div>
