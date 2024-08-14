@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Path from "../../paths";
 
 import { useEffect, useState } from "react";
