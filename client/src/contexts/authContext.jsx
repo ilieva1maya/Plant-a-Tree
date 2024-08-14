@@ -18,7 +18,7 @@ export const AuthProvider = ({
   
         setAuth(result);
         localStorage.setItem('accessToken', result.accessToken);
-        navigate(Path.Home);
+        navigate(-1);
     }
 
     const registerSubmitHandler = async (values) => {
