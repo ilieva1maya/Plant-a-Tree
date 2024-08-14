@@ -33,7 +33,6 @@ function App() {
           <Route path={Path.Login} element={<Login />} />
           <Route path={Path.Register} element={<Register />} />
 
-
           <Route element={<AuthGuard />}>
             <Route path={Path.AddSpecies} element={<AddSpecies />} />           
             <Route path={Path.Details} element={<Details />} />
