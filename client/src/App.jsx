@@ -11,8 +11,6 @@ import Footer from "./components/Footer"
 import Login from "./components/login/Login"
 import Home from "./components/home/Home"
 import Register from "./components/register/Register"
-import MyForest from "./components/MyForest"
-import Contributors from "./components/Contributors"
 import JoinUs from "./components/joinUs/JoinUs"
 import ContactUs from "./components/contacts/ContacUs"
 import Catalog from "./components/catalog/Catalog"
@@ -37,11 +35,9 @@ function App() {
 
 
           <Route element={<AuthGuard />}>
-            <Route path={Path.AddSpecies} element={<AddSpecies />} />
-            <Route path={Path.MyForest} element={<MyForest />} />
+            <Route path={Path.AddSpecies} element={<AddSpecies />} />           
             <Route path={Path.Details} element={<Details />} />
-            <Route path={Path.Edit} element={<Edit />} />
-            <Route path={Path.Contributors} element={<Contributors />} />
+            <Route path={Path.Edit} element={<Edit />} />            
             <Route path={Path.JoinUs} element={<JoinUs />} />
             <Route path={Path.Logout} element={<Logout />} />
           </Route>

@@ -22,12 +22,10 @@ export default function NavBar() {
 
                     {isAuthenticated && (
                         <div className="navbar-nav mx-auto py-0">
-                            <Link to={Path.AddSpecies} className="nav-item nav-link">Add Species</Link>
-                            <Link to={Path.MyForest} className="nav-item nav-link">My Forest</Link>
-                            <Link to={Path.Contributors} className="nav-item nav-link">Our Contributors</Link>
+                            <Link to={Path.AddSpecies} className="nav-item nav-link">Add Species</Link>                            
                             <Link to={Path.JoinUs} className="nav-item nav-link">Join Us</Link>                           
                             <Link to={Path.Logout} className="nav-item nav-link">Logout</Link>
-                            <Link to={Path.MyForest} className="nav-item nav-link">/\ Hello, {username}! /\</Link>
+                            <Link to={Path.Catalog} className="nav-item nav-link">/\ Hello, {username}! /\</Link>
                         </div>
                     )}
 

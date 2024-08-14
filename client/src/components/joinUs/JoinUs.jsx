@@ -8,7 +8,7 @@ export default function JoinUs() {
         e.preventDefault();
 
         alert('Thanks for your interest! We will review your application and will come back to you shortly!');
-        navigate(Path.Contributors);
+        navigate(Path.Home);
     }
 
     return (
