@@ -1352,6 +1352,19 @@
                 more: "Easy to care for, it adapts to all soil types, either in beds or in hedges, or in pots or garden boxes for a terrace.  You may plant it as a standalone and also as part of a hedge to decorate your hedge in winter thanks to its ornamental berries.",
                 _createdOn: 1723554817528,
                 _id: "a283280e-17ae-4aa1-b568-d23546580681"
+            },
+            "a606b31d-2310-4d98-bead-0684ae0ea0e1":
+            {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                name: "Maple",
+                height: "50 to 85 feet (15 to 25 meters)",
+                exposure: "sunny, not scorching",
+                soil: "ordinary",
+                needs: "ensure constant moisture remains in the soil by mulching the base of the trunk during the first years",
+                image: "https://www.nature-and-garden.com/wp-content/uploads/sites/4/2017/11/maple.jpg",
+                more: "The maple tree is known for the unique shape of its leaves, and for its amazing fiery colors in fall. It also grows very fast, and its hardiness helps it adapt to almost any growing environment.  In forest settings, it’s one of the species that easily sets seed on its own. This makes natural regeneration very easy on plots that are tended to grow wood.",
+                _createdOn: 1723558870629,
+                _id: "a606b31d-2310-4d98-bead-0684ae0ea0e1"
             }
         },
         games: {
