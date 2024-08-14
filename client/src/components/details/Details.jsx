@@ -45,7 +45,7 @@ export default function Details() {
     };
 
     const deleteButtonHandler = async () => {
-        const hasConfirmed = confirm(`Are you sure you want to delete ${tree.title}?`);
+        const hasConfirmed = confirm(`Are you sure you want to delete ${tree.name}?`);
 
         if (hasConfirmed) {
             await speciesService.remove(id);
