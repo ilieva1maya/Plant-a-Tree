@@ -12,6 +12,8 @@ These are the covered functionalities:
 * implemented client-side routing
 * error handling and data validation
 
+Hosting URL: https://plant-a-tree-6217b.web.app
+
 Enjoy!
  
 ## How to build 
