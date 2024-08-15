@@ -3,6 +3,7 @@ import Path from "../../paths";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import * as speciesService from '../../services/speciesService'
+import { pathToUrl } from "../../utils/pathUtils";
 
 export default function Edit() {
 
@@ -29,10 +30,11 @@ export default function Edit() {
         e.preventDefault();
 
         const values = Object.fromEntries(new FormData(e.currentTarget))
-
+        const newPath = pathToUrl(Path.Details, { id })
+        
         try {
             await speciesService.edit(id, values);
-            navigate(Path.Catalog);
+            navigate(newPath);
         } catch (error) {
             console.log(`Error from edit.jsx: ${error}`);
         }
