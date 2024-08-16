@@ -19,6 +19,7 @@ import Edit from "./components/edit/Edit"
 import Logout from "./components/logout/Logout"
 import Footer from "./components/footer/Footer"
 
+
 function App() {
   return (
     <AuthProvider>

@@ -57,9 +57,8 @@ export default function Login() {
 							placeholder="E-mail"
 							value={formik.values.email}
 							onChange={formik.handleChange}
-						/>
-						{formik.errors.email && <p>{formik.errors.email}</p>}
-						<span className="focus-input100"></span>
+						/>						
+						{formik.errors.email && <p className="text-red">{formik.errors.email}</p>}
 					</div>
 
 					<div className="wrap-input100 validate-input" data-validate="Please enter password">
@@ -71,8 +70,7 @@ export default function Login() {
 							value={formik.values.password}
 							onChange={formik.handleChange}
 						/>
-						{formik.errors.password && <p>{formik.errors.password}</p>}
-						<span className="focus-input100"></span>
+						{formik.errors.password && <p className="text-red">{formik.errors.password}</p>}
 					</div>
 
 					<div className="text-right p-t-13 p-b-23">
