@@ -1,5 +1,4 @@
 import { useContext } from "react";
-import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useFormik } from 'formik';
 
@@ -8,28 +7,22 @@ import Path from "../../paths";
 
 export default function Login() {
 	const { loginSubmitHandler } = useContext(AuthContext);
-
 	const navigate = useNavigate();
-
+	
 	const formik = useFormik({
 		initialValues: {
 			email: '',
 			password: '',
 		},
 		onSubmit: (values) => { loginSubmitHandler(values) },
-
 		validate: ({ email, password }) => {
 			let errors = {};
 			if (!email) {
 				errors = { ...errors, email: 'Email is required!' };
-			} else if (!/^[^@ ]+@[^@ ]+\.[^@ .]{2,}$/.test(email)) {
-				errors = { ...errors, email: 'Email is not valid!' };
 			}
 			if (!password) {
 				errors = { ...errors, password: 'Password is required!' };
-			} else if (password.length < 6) {
-				errors = { ...errors, password: 'Password should be at least 6 characters!' };
-			}
+			}	
 			return errors;
 		},
 	});
