@@ -5,12 +5,17 @@ export default function AddSpecies() {
     const navigate = useNavigate();
     const addSpeciesSubmitHandler = async (e) => {
         e.preventDefault();
-
+        
         const speciesData = Object.fromEntries(new FormData(e.currentTarget));
 
         try {
-            await speciesService.create(speciesData);
-            navigate('/catalog');
+            if (!speciesData.name || !speciesData.height || !speciesData.exposure || !speciesData.soil || !speciesData.needs || !speciesData.image || !speciesData.more) {
+                console.log (JSON.stringify(speciesData));
+                alert('All fields are required!');
+            } else {
+                await speciesService.create(speciesData);
+                navigate('/catalog');
+            }
         } catch (error) {
             // в последствие някаква логика, нотификация за грешки
             console.log(`Error from create.jsx: ${error}`);
@@ -19,7 +24,7 @@ export default function AddSpecies() {
 
     return (
         <div className="container-fluid about pt-5">
-            <div className="container">  
+            <div className="container">
                 <div className="row gx-5 mb-5">
 
                     <div className="col-lg-6 mb-5 mb-lg-0">
