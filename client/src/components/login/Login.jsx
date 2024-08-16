@@ -23,41 +23,38 @@ export default function Login() {
 
 	const formik = useFormik({
 		initialValues: {
-			email: '', 
+			email: '',
 			password: '',
-			// confirmPassword: ''
 		},
-		onSubmit: (values) => {loginSubmitHandler(values)},
-		
-		
-		// validate: ({email, password, confirmPassword})=> {
-		// 	let errors = { email: '', password: ''};
-		// 	if(!email) {
-		// 		errors = {...errors, email: 'Email is required!'};				
-		// 	} else if (!/^[^@ ]+@[^@ ]+\.[^@ .]{2,}$/.test(email)) {
-		// 		errors = {...errors, email: 'Email is not valid!'};
-		// 	}
-		// 	if(!password) {
-		// 		errors = {...errors, password: 'Password is required!'};
-		// 	} else if (password.length < 6) {
-		// 		errors = {...errors, password: 'Password should be at least 6 characters!'};
-		// 	}
-		// 	if(!confirmPassword) {
-		// 		errors = {...errors, confirmPassword: 'Please confirm password!'};
-		// 	} else if (confirmPassword != password) {
-		// 		errors = {...errors, confirmPassword: 'Passwords do not match!'};
-		// 	}
-		// 	return errors;
-		// }
+		onSubmit: (values) => { loginSubmitHandler(values) },
+
+		// validate: ({ email, password }) => {true
+		// },
+
+		validate: ({email, password})=> {
+			// let errors = { email: '', password: ''};
+			let errors = {};
+			if(!email) {
+				errors = {...errors, email: 'Email is required!'};				
+			} else if (!/^[^@ ]+@[^@ ]+\.[^@ .]{2,}$/.test(email)) {
+				errors = {...errors, email: 'Email is not valid!'};
+			}
+			if(!password) {
+				errors = {...errors, password: 'Password is required!'};
+			} else if (password.length < 6) {
+				errors = {...errors, password: 'Password should be at least 6 characters!'};
+			}
+			return errors;
+		},		
 	});
 
 	const forgottenPassword = async (e) => {
-        e.preventDefault();
+		e.preventDefault();
 
-        prompt('Please type your email \nPlease follow the steps in your email for password recovery');
-        navigate(Path.Home);
-    }
-	
+		prompt('Please type your email \nPlease follow the steps in your email for password recovery');
+		navigate(Path.Home);
+	}
+
 
 	return (
 		<div className="container-login100">
@@ -68,26 +65,26 @@ export default function Login() {
 					</span>
 
 					<div className="wrap-input100 validate-input m-b-16" data-validate="Please enter username">
-						<input className="input100"  
-						id="email"
-						name="email" 
-						type="email"
-						placeholder="E-mail"
-						onChange={formik.handleChange}
-						value={formik.values.email} 
+						<input className="input100"
+							id="email"
+							name="email"
+							type="email"
+							placeholder="E-mail"
+							value={formik.values.email}
+							onChange={formik.handleChange}
 						/>
 						{formik.errors.email && <p>{formik.errors.email}</p>}
 						<span className="focus-input100"></span>
 					</div>
-					
+
 					<div className="wrap-input100 validate-input" data-validate="Please enter password">
-						<input className="input100" 
-						id="password"
-						type="password" 
-						name="password"
-						placeholder="Password"
-						onChange={formik.handleChange}
-						value={formik.values.password} 
+						<input className="input100"
+							id="password"
+							type="password"
+							name="password"
+							placeholder="Password"
+							value={formik.values.password}
+							onChange={formik.handleChange}
 						/>
 						{formik.errors.password && <p>{formik.errors.password}</p>}
 						<span className="focus-input100"></span>
