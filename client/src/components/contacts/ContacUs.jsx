@@ -7,8 +7,17 @@ export default function ContactUs() {
     const contactUs = async (e) => {
         e.preventDefault();
 
-        alert('Thanks for contacting us! We will come back to you shortly!');
-        navigate(Path.Home);
+        const values = Object.fromEntries(new FormData(e.currentTarget))
+
+        if (!values.name || !values.email || !values.subject || !values.message) {
+            alert('All fields are required!');
+        } else {
+            console.log(JSON.stringify(values));
+
+            alert('Thanks for contacting us! We will come back to you shortly!');
+            navigate(Path.Home);
+        }
+
     }
 
     return (
@@ -23,16 +32,16 @@ export default function ContactUs() {
                             <form onSubmit={contactUs}>
                                 <div className="row g-3">
                                     <div className="col-6">
-                                        <input type="text" className="form-control bg-light border-0 px-4" placeholder="Your Name" style={{ height: 55 }} />
+                                        <input type="text" name="name" className="form-control bg-light border-0 px-4" placeholder="Your Name" style={{ height: 55 }} />
                                     </div>
                                     <div className="col-6">
-                                        <input type="email" className="form-control bg-light border-0 px-4" placeholder="Your Email" style={{ height: 55 }} />
+                                        <input type="email" name="email" className="form-control bg-light border-0 px-4" placeholder="Your Email" style={{ height: 55 }} />
                                     </div>
                                     <div className="col-12">
-                                        <input type="text" className="form-control bg-light border-0 px-4" placeholder="Subject" style={{ height: 55 }} />
+                                        <input type="text" name="subject" className="form-control bg-light border-0 px-4" placeholder="Subject" style={{ height: 55 }} />
                                     </div>
                                     <div className="col-12">
-                                        <textarea className="form-control bg-light border-0 px-4 py-3" rows="2" placeholder="Message"></textarea>
+                                        <textarea name="message" className="form-control bg-light border-0 px-4 py-3" rows="2" placeholder="Message"></textarea>
                                     </div>
                                     <div className="col-12">
                                         <button className="btn btn-secondary w-100 py-3" type="submit">Send Message</button>
