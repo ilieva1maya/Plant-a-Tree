@@ -42,6 +42,8 @@ export default function Details() {
             type: 'ADD_COMMENT',
             payload: newComment
         });
+
+        values.comment = '';
     };
 
     const deleteButtonHandler = async () => {
