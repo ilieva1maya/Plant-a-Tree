@@ -3,21 +3,11 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useFormik } from 'formik';
 
-// import useForm from "../../hooks/useForm";
 import AuthContext from "../../contexts/authContext";
 import Path from "../../paths";
 
-// const LoginFormKeys = {
-// 	Email: 'email',
-// 	Password: 'password'
-// }
-
 export default function Login() {
 	const { loginSubmitHandler } = useContext(AuthContext);
-	// const { values, onChange, onSubmit } = useForm(loginSubmitHandler, {
-	// 	[LoginFormKeys.Email]: '',
-	// 	[LoginFormKeys.Password]: '',
-	// });
 
 	const navigate = useNavigate();
 
@@ -28,24 +18,20 @@ export default function Login() {
 		},
 		onSubmit: (values) => { loginSubmitHandler(values) },
 
-		// validate: ({ email, password }) => {true
-		// },
-
-		validate: ({email, password})=> {
-			// let errors = { email: '', password: ''};
+		validate: ({ email, password }) => {
 			let errors = {};
-			if(!email) {
-				errors = {...errors, email: 'Email is required!'};				
+			if (!email) {
+				errors = { ...errors, email: 'Email is required!' };
 			} else if (!/^[^@ ]+@[^@ ]+\.[^@ .]{2,}$/.test(email)) {
-				errors = {...errors, email: 'Email is not valid!'};
+				errors = { ...errors, email: 'Email is not valid!' };
 			}
-			if(!password) {
-				errors = {...errors, password: 'Password is required!'};
+			if (!password) {
+				errors = { ...errors, password: 'Password is required!' };
 			} else if (password.length < 6) {
-				errors = {...errors, password: 'Password should be at least 6 characters!'};
+				errors = { ...errors, password: 'Password should be at least 6 characters!' };
 			}
 			return errors;
-		},		
+		},
 	});
 
 	const forgottenPassword = async (e) => {
@@ -54,7 +40,6 @@ export default function Login() {
 		prompt('Please type your email \nPlease follow the steps in your email for password recovery');
 		navigate(Path.Home);
 	}
-
 
 	return (
 		<div className="container-login100">
@@ -95,12 +80,6 @@ export default function Login() {
 							Forgot Username / Password?
 						</a>
 					</div>
-
-					{/* <div className="container-login100-form-btn">
-						<button className="login100-form-btn">
-							Login
-						</button>
-					</div> */}
 
 					<div className="container-login100-form-btn">
 						<button type="submit" className="login100-form-btn">
