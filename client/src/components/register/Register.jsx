@@ -1,54 +1,73 @@
 import { Link } from "react-router-dom"
+import { useFormik } from 'formik';
+
 import Path from "../../paths"
 import { useContext } from "react"
 import AuthContext from "../../contexts/authContext"
-import useForm from "../../hooks/useForm";
-
-const RegisterFormKeys = {
-	Email: 'email',
-	Password: 'password',
-	ConfirmPassword: 'rePass',
-}
 
 export default function Register() {
 
 	const { registerSubmitHandler } = useContext(AuthContext);
-	const { values, onChange, onSubmit } = useForm(registerSubmitHandler, {
-		[RegisterFormKeys.Email]: '',
-		[RegisterFormKeys.Password]: '',
-		[RegisterFormKeys.ConfirmPassword]: '',
+
+	const formik = useFormik({
+		initialValues: {
+			email: '',
+			password: '',
+			confirmPassword: '',
+		},
+		onSubmit: (values) => { registerSubmitHandler(values) },
+
+		validate: ({ email, password, confirmPassword }) => {
+			let errors = {};
+			if (!email) {
+				errors = { ...errors, email: 'Email is required!' };
+			} else if (!/^[^@ ]+@[^@ ]+\.[^@ .]{2,}$/.test(email)) {
+				errors = { ...errors, email: 'Email is not valid!' };
+			}
+			if (!password) {
+				errors = { ...errors, password: 'Password is required!' };
+			} else if (password.length < 6) {
+				errors = { ...errors, password: 'Password should be at least 6 characters!' };
+			}
+			if (!confirmPassword) {
+				errors = { ...errors, confirmPassword: 'Please confirm the password!' };
+			} else if (confirmPassword != password) {
+				errors = { ...errors, confirmPassword: 'Passwords do not match!' };
+			}
+			return errors;
+		},
 	});
 
 	return (
 		<div className="container-login100">
 			<div className="wrap-login100">
-				<form className="login100-form validate-form p-l-55 p-r-55 p-t-150" onSubmit={onSubmit}>
+				<form className="login100-form validate-form p-l-55 p-r-55 p-t-150" onSubmit={formik.handleSubmit}>
 					<span className="login100-form-title">
 						Register
 					</span>
 
 					<div className="wrap-input100 validate-input m-b-16" data-validate="Please enter username">
 						<input className="input100" type="email" name="email" placeholder="E-mail"
-							onChange={onChange}
-							values={values[RegisterFormKeys.Email]}
+							onChange={formik.handleChange}
+							value={formik.values.email}
 						/>
-						<span className="focus-input100"></span>
+						{formik.errors.email && <p className="text-red">{formik.errors.email}</p>}
 					</div>
 
 					<div className="wrap-input100 validate-input m-b-16" data-validate="Please enter password">
 						<input className="input100" type="password" name="password" placeholder="Password"
-							onChange={onChange}
-							values={values[RegisterFormKeys.Password]}
+							onChange={formik.handleChange}
+							value={formik.values.password}
 						/>
-						<span className="focus-input100"></span>
+						{formik.errors.password && <p className="text-red">{formik.errors.password}</p>}
 					</div>
 
 					<div className="wrap-input100 validate-input m-b-16" data-validate="Please enter password">
-						<input className="input100" type="password" name="rePass" placeholder="RePassword"
-							onChange={onChange}
-							values={values[RegisterFormKeys.ConfirmPassword]}
+						<input className="input100" type="password" name="confirmPassword" placeholder="Confirm password"
+							onChange={formik.handleChange}
+							value={formik.values.confirmPassword}
 						/>
-						<span className="focus-input100"></span>
+						{formik.errors.confirmPassword && <p className="text-red">{formik.errors.confirmPassword}</p>}
 					</div>
 
 					<div className="container-login100-form-btn">
