@@ -71,7 +71,7 @@ export default function Register() {
 					</div>
 
 					<div className="container-login100-form-btn">
-						<button className="login100-form-btn">
+						<button type="submit" className="login100-form-btn">
 							Register
 						</button>
 					</div>

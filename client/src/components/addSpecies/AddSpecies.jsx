@@ -10,7 +10,6 @@ export default function AddSpecies() {
 
         try {
             if (!speciesData.name || !speciesData.height || !speciesData.exposure || !speciesData.soil || !speciesData.needs || !speciesData.image || !speciesData.more) {
-                console.log (JSON.stringify(speciesData));
                 alert('All fields are required!');
             } else {
                 await speciesService.create(speciesData);

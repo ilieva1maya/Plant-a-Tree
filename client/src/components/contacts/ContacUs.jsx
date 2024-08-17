@@ -12,8 +12,6 @@ export default function ContactUs() {
         if (!values.name || !values.email || !values.subject || !values.message) {
             alert('All fields are required!');
         } else {
-            console.log(JSON.stringify(values));
-
             alert('Thanks for contacting us! We will come back to you shortly!');
             navigate(Path.Home);
         }
