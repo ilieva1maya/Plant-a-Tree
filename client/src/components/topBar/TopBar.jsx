@@ -22,9 +22,9 @@ export default function TopBar() {
                 </div>
                 <div className="col-lg-3">
                     <div className="d-flex align-items-center justify-content-end">
-                        <a className="btn btn-primary btn-square rounded-circle me-2" href="https://www.facebook.com/"><i className="fab fa-facebook-f"></i></a>
-                        <a className="btn btn-primary btn-square rounded-circle me-2" href="https://www.linkedin.com/"><i className="fab fa-linkedin-in"></i></a>
-                        <a className="btn btn-primary btn-square rounded-circle" href="https://www.instagram.com/"><i className="fab fa-instagram"></i></a>
+                        <a className="btn btn-primary btn-square rounded-circle me-2" href="https://www.facebook.com/" target="_blank"><i className="fab fa-facebook-f"></i></a>
+                        <a className="btn btn-primary btn-square rounded-circle me-2" href="https://www.linkedin.com/" target="_blank"><i className="fab fa-linkedin-in"></i></a>
+                        <a className="btn btn-primary btn-square rounded-circle" href="https://www.instagram.com/" target="_blank"><i className="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
