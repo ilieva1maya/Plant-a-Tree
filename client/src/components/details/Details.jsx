@@ -31,19 +31,25 @@ export default function Details() {
 
     const addCommentHandler = async (values) => {
 
-        const newComment = await commentService.create(
-            id,
-            values.comment,
-        );
+        if (values.comment) {
+            const newComment = await commentService.create(
+                id,
+                values.comment,
+            );
+    
+            newComment.owner = { email };
+    
+            dispatch({
+                type: 'ADD_COMMENT',
+                payload: newComment
+            });
+    
+            values.comment = '';
+        } else {
+            alert("You cannot submit empty comment!")
+        }
 
-        newComment.owner = { email };
 
-        dispatch({
-            type: 'ADD_COMMENT',
-            payload: newComment
-        });
-
-        values.comment = '';
     };
 
     const deleteButtonHandler = async () => {
