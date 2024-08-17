@@ -10,7 +10,7 @@ export default function NotFound() {
                 <div className="text-start p-5" style={{ maxWidth: 1200 }}>
                     <h1 className="display-4 text-white mb-md-4">Page not Found
                     </h1>                    
-                    <Link to={Path.Home} className="btn btn-secondary py-md-3 px-md-5">Back</Link>                        
+                    <Link to={Path.Home} className="btn btn-secondary py-md-3 px-md-5">Back to Home</Link>                        
                 </div>
             </div>              
         </div>
