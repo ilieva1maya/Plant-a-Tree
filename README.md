@@ -12,6 +12,13 @@ These are the covered functionalities:
 * implemented client-side routing
 * error handling and data validation
 
+I was not using consistent approaches through the project, for instance:
+* controlled and uncontrolled forms
+* main CSS and separate CSS files for some of the components
+* validation using external library and basic validation, written by me
+* error handling via try…catch and .then().catch()
+This was with the purposes of my own learning curve, to try different approaches and learn more.
+
 Hosting URL: https://plant-a-tree-6217b.web.app
 
 Enjoy!
