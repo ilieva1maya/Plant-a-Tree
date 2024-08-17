@@ -18,6 +18,7 @@ import Details from "./components/details/Details";
 import Edit from "./components/edit/Edit";
 import Logout from "./components/logout/Logout";
 import Footer from "./components/footer/Footer";
+import NotFound from "./components/notFound/NotFound";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route path={Path.Contacts} element={<ContactUs />} />
           <Route path={Path.Login} element={<Login />} />
           <Route path={Path.Register} element={<Register />} />
+          <Route path={Path.NotFound} element={<NotFound />} />
 
           <Route element={<AuthGuard />}>
             <Route path={Path.AddSpecies} element={<AddSpecies />} />           
