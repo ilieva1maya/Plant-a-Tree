@@ -21,20 +21,26 @@ const buildOptions = (data) => {
 }
 
 export const request = async (method, url, data) => {
-    const response = await fetch(url, {        
-        ...buildOptions(data),
-        method,
-    });
+    try {
+        const response = await fetch(url, {
+            ...buildOptions(data),
+            method,
+        });
 
-    if (response.status === 204) {
-        return {};
+        if (response.status === 204) {
+            return {};
+        }
+
+        const result = await response.json();
+
+        if (!response.ok) {
+            throw result;
+        }
+
+        return result;
+
+    } catch (error) {
+        alert(error.message);
+        throw error;
     }
-
-    const result = await response.json();
-
-    if (!response.ok) {
-        throw result;
-    }
-   
-    return result;
 }
