@@ -2,7 +2,7 @@ import Path from "../../paths";
 
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import * as speciesService from '../../services/speciesService'
+import * as speciesService from '../../services/speciesService';
 import { pathToUrl } from "../../utils/pathUtils";
 
 export default function Edit() {
@@ -29,8 +29,8 @@ export default function Edit() {
     const editTreeSubmitHandler = async (e) => {
         e.preventDefault();
 
-        const values = Object.fromEntries(new FormData(e.currentTarget))
-        const newPath = pathToUrl(Path.Details, { id })
+        const values = Object.fromEntries(new FormData(e.currentTarget));
+        const newPath = pathToUrl(Path.Details, { id });
 
         try {
             if (!values.name || !values.height || !values.exposure || !values.soil || !values.needs || !values.image || !values.more) {
@@ -103,5 +103,5 @@ export default function Edit() {
                 </div>
             </div>
         </div>
-    )
+    );
 }

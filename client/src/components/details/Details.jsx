@@ -18,16 +18,16 @@ export default function Details() {
 
     useEffect(() => {
         speciesService.getOne(id)
-            .then(setTree)
+            .then(setTree);
 
         commentService.getAll(id)
             .then((result) => {
                 dispatch({
                     type: 'GET_ALL__COMMENTS',
                     payload: result,
-                })
-            })
-    }, [id])
+                });
+            });
+    }, [id]);
 
     const addCommentHandler = async (values) => {
 
@@ -90,7 +90,6 @@ export default function Details() {
                         )}
 
                     </div>
-
                 </div>
 
                 <div className="container-fluid py-3">

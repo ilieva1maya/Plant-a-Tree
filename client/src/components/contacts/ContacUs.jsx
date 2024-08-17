@@ -7,7 +7,7 @@ export default function ContactUs() {
     const contactUs = async (e) => {
         e.preventDefault();
 
-        const values = Object.fromEntries(new FormData(e.currentTarget))
+        const values = Object.fromEntries(new FormData(e.currentTarget));
 
         if (!values.name || !values.email || !values.subject || !values.message) {
             alert('All fields are required!');
@@ -15,7 +15,6 @@ export default function ContactUs() {
             alert('Thanks for contacting us! We will come back to you shortly!');
             navigate(Path.Home);
         }
-
     }
 
     return (
@@ -83,5 +82,5 @@ export default function ContactUs() {
                 </div>
             </div>
         </div>
-    )
+    );
 }

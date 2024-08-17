@@ -1,6 +1,6 @@
 import { request } from "../lib/request";
 
-const baseUrl = 'http://localhost:3030/data/comments'
+const baseUrl = 'http://localhost:3030/data/comments';
 
 export const create = async (id, text) => {
     const newComment = await request('POST', baseUrl, {

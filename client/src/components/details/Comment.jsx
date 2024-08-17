@@ -6,5 +6,5 @@ export default function Comment({
         <li className="comment">
             <p>{username}: {text}</p>
         </li>
-    )
+    );
 }

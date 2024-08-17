@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 import { useFormik } from 'formik';
 
-import Path from "../../paths"
-import { useContext } from "react"
-import AuthContext from "../../contexts/authContext"
+import Path from "../../paths";
+import { useContext } from "react";
+import AuthContext from "../../contexts/authContext";
 
 export default function Register() {
 
@@ -87,6 +87,5 @@ export default function Register() {
 				</form>
 			</div>
 		</div>
-
 	)
 }
