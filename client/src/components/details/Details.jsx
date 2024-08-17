@@ -48,8 +48,6 @@ export default function Details() {
         } else {
             alert("You cannot submit empty comment!")
         }
-
-
     };
 
     const deleteButtonHandler = async () => {
