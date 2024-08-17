@@ -115,7 +115,7 @@ export default function Details() {
                     <label className="comment-form-title bg-primary">Add comment</label>
                     <form className="login100-form validate-form p-l-55 p-r-55 p-t-70" onSubmit={onSubmit}>
                         <textarea name="comment" value={values.comment} onChange={onChange} placeholder="Share your opinion......" style={{ width: 400 }} ></textarea>
-                        <input className="input100 bg-secondary" type="submit" value="Add Comment" />
+                        <input className="input100 bg-secondary" type="submit" disabled={!values.comment} value="Add Comment" />
                     </form>
                 </div>
 
