@@ -16,8 +16,7 @@ export default function AddSpecies() {
                 navigate('/catalog');
             }
         } catch (error) {
-            // в последствие някаква логика, нотификация за грешки
-            console.log(`Error from create.jsx: ${error}`);
+            console.log(`Error from AddSpecies.jsx: ${error}`);
         }
     }
 

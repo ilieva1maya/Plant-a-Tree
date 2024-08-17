@@ -40,7 +40,7 @@ export default function Edit() {
                 navigate(newPath);
             }
         } catch (error) {
-            console.log(`Error from edit.jsx: ${error}`);
+            console.log(`Error from Edit.jsx: ${error}`);
         }
     }
 
